@@ -2,6 +2,8 @@
 
 A responsive MapleStory HEXA planner with a game-style matrix and exported MapleScouter orders.
 
+Hover or keyboard-focus a skill to read its MapleStory Wiki description and exact level effects. Matrix nodes use current levels, locked nodes preview level 1, and roadmap steps use their target levels. On phones, select a matrix node and tap **Skill description**; skill-list icons and milestone details also open descriptions. Related mastery skills are grouped together. Third common and third skill nodes, plus unmatched wiki entries, show an explicit unavailable state. See [skill data attribution and coverage](SKILL-DATA-NOTICE.md).
+
 Live website: [hatzelu](https://darealshekel.github.io/hatzelu/)
 
 ## Open it

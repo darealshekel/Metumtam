@@ -1,0 +1,20 @@
+.skill-tooltip{position:fixed;inset:auto;margin:0;width:min(540px,calc(100vw - 24px));max-height:min(660px,calc(100dvh - 24px));padding:18px;overflow:auto;overscroll-behavior:contain;color:#edf0f5;background:linear-gradient(135deg,#293442f5,#171d29fa);border:1px solid #8591a980;border-radius:9px;box-shadow:0 12px 44px #0009,inset 0 0 0 1px #ffffff09;backdrop-filter:blur(16px);font-size:13px;line-height:1.55;z-index:1000}
+.skill-description{color:#dce2ec;font-size:13px;line-height:1.6;text-align:left;overflow-wrap:anywhere}
+.description-heading{display:flex;gap:12px;align-items:center;padding-bottom:13px;border-bottom:1px solid #aab4cc30;margin-bottom:14px}
+.description-heading img{image-rendering:pixelated;flex:none;border-radius:4px}
+.description-heading h3{font-size:15px;line-height:1.4;color:#fff;margin:0 0 3px;font-weight:600}
+.description-heading span,.description-level{font-size:12px;color:#c4afee}
+.description-part+.description-part{margin-top:18px;padding-top:14px;border-top:1px solid #aab4cc20}
+.description-part h4{font-size:13px;line-height:1.5;color:#efe4ff;margin:0 0 6px;font-weight:600}
+.skill-description p{margin:0 0 10px;white-space:pre-line}
+.description-effects{padding:10px 12px;margin:10px 0;border-left:2px solid #b78be8;background:#14182380;white-space:pre-line}
+.description-level{display:block;margin-top:5px}
+.skill-description a{font-size:11px;color:#b5cee9;text-underline-offset:3px}
+.skill-description a:hover{color:#fff}
+.description-source{font-size:10px;line-height:1.7;color:#a0acbf;margin-top:17px;padding-top:12px;border-top:1px solid #aab4cc30}
+.description-unavailable{color:#e5c392}
+button.skill-icon{padding:0;cursor:help;flex-shrink:0}
+button.skill-icon:focus-visible{outline:2px solid #d0a3ff;outline-offset:4px}
+.matrix-description-button{margin-top:12px;font-size:12px}
+#dialog-body>.skill-description,.milestone-skill-description{margin-top:20px;padding:18px;background:#222a3480;border:1px solid #8591a940;border-radius:8px}
+@media(max-width:760px){.skill-tooltip{font-size:12px;padding:14px}.skill-description{font-size:12px}.description-heading h3{font-size:14px}.matrix-description-button{min-height:40px}}
