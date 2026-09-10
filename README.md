@@ -2,7 +2,9 @@
 
 A responsive MapleStory HEXA planner with a game-style matrix and exported MapleScouter orders.
 
-Hover or keyboard-focus a skill to read its MapleStory Wiki description and exact level effects. Matrix nodes use current levels, locked nodes preview level 1, and roadmap steps use their target levels. On phones, select a matrix node and tap **Skill description**; skill-list icons and milestone details also open descriptions. Related mastery skills are grouped together. Third common and third skill nodes, plus unmatched wiki entries, show an explicit unavailable state. See [skill data attribution and coverage](SKILL-DATA-NOTICE.md).
+Hover a skill for a compact MapleStory Wiki preview. It never intercepts pointer input and disappears immediately when the pointer leaves the skill. Select a matrix node to see its complete next-level description in the scrollable Enhance Node panel, alongside editable owned materials and exact one-level costs. Enhance spends saved materials and raises the selected node by one level; Undo restores the level and both materials. Sol Erda ownership is saved per class (0–20), and fragments share the existing forecast inventory. Older exports default Sol Erda ownership to zero. Preview mode cannot spend materials. Sol Janus has no exported cost table, so its costs remain unavailable and its level can be edited manually.
+
+The Skill description button, skill-list icons, and milestone details also open complete descriptions with keyboard and phone access. Related mastery skills are grouped together. Third common and third skill nodes, plus unmatched wiki entries, show an explicit unavailable state. See [skill data attribution and coverage](SKILL-DATA-NOTICE.md).
 
 Live website: [hatzelu](https://darealshekel.github.io/hatzelu/)
 
