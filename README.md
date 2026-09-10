@@ -57,9 +57,9 @@ To add it to your website, copy this entire directory to a static route such as 
 
 ## Data scope
 
-Snapshot: September 10, 2026. Source: https://maplescouter.com/en/hexa
+Snapshot: September 11, 2026. Source: https://maplescouter.com/en/hexa
 
-Orders use either fragment efficiency or Sol Erda efficiency, reset starting levels, the general-boss cycle, and the source's built-in reference stats. The same reference efficiency values were used across classes. Each mode is a separate source response, with its original milestones preserved. This planner skips reached milestones and recalculates costs; it does not recompute character-specific damage optimization. No power-band selector is shown because each resource mode contains one reference order per class.
+Orders are freshly calculated for synthetic, class-specific level 286 profiles targeting 82,500 Boss 380 Normal Power (verified range 82,368–82,590). Each class was recalculated through the public manual calculator, and both complete resource orders were collected with grouped steps expanded. See [reference assumptions and exact inputs](REFERENCE-PROFILES.md). These are assumed stat balances, not typical gear or personalized optimizations. The planner skips reached milestones and recalculates costs; it does not recompute damage efficiency when users change levels.
 
 The third skill core (`skillCore3`) is excluded by default. This removes its steps from the roadmap and its costs from totals, progress, and forecasts. Its saved levels and goals are retained. Other milestones keep their relative order: this is a filtered source order, not an independently optimized pre-third-core GMS order. The toggle does not claim to validate all other skills against a particular region's patch.
 

@@ -1,0 +1,1508 @@
+{
+  "target": 82500,
+  "metric": "Boss 380 Normal",
+  "method": "Synthetic stat profiles calibrated through MapleScouter public manual calculator; orders collected through the visible HEXA interface with grouped steps expanded. Base attack adjusted per class; assumptions are not representative gear recommendations.",
+  "classes": [
+    {
+      "id": "adele",
+      "name": "Adele",
+      "normal380": 82498,
+      "attackBase": 1848,
+      "orders": {
+        "fragments": 211,
+        "erda": 94
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 85927
+        },
+        {
+          "atk": 1824,
+          "score": 82168
+        },
+        {
+          "atk": 1848,
+          "score": 82498
+        }
+      ]
+    },
+    {
+      "id": "angelic_buster",
+      "name": "Angelic Buster",
+      "normal380": 82501,
+      "attackBase": 1959,
+      "orders": {
+        "fragments": 205,
+        "erda": 92
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 84473
+        },
+        {
+          "atk": 1936,
+          "score": 82174
+        },
+        {
+          "atk": 1959,
+          "score": 82501
+        }
+      ]
+    },
+    {
+      "id": "aran",
+      "name": "Aran",
+      "normal380": 82503,
+      "attackBase": 1958,
+      "orders": {
+        "fragments": 209,
+        "erda": 94
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 84619
+        },
+        {
+          "atk": 1924,
+          "score": 81985
+        },
+        {
+          "atk": 1958,
+          "score": 82503
+        }
+      ]
+    },
+    {
+      "id": "arch_mage_fire_poison",
+      "name": "Arch Mage (Fire, Poison)",
+      "normal380": 82504,
+      "attackBase": 2155,
+      "orders": {
+        "fragments": 197,
+        "erda": 90
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 81758
+        },
+        {
+          "atk": 2166,
+          "score": 82653
+        },
+        {
+          "atk": 2155,
+          "score": 82504
+        }
+      ]
+    },
+    {
+      "id": "arch_mage_ice_lightning",
+      "name": "Arch Mage (Ice, Lightning)",
+      "normal380": 82499,
+      "attackBase": 2227,
+      "orders": {
+        "fragments": 197,
+        "erda": 90
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 80793
+        },
+        {
+          "atk": 2255,
+          "score": 82874
+        },
+        {
+          "atk": 2227,
+          "score": 82499
+        }
+      ]
+    },
+    {
+      "id": "ark",
+      "name": "Ark",
+      "normal380": 82510,
+      "attackBase": 1713,
+      "orders": {
+        "fragments": 214,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 87793
+        },
+        {
+          "atk": 1692,
+          "score": 82209
+        },
+        {
+          "atk": 1713,
+          "score": 82510
+        }
+      ]
+    },
+    {
+      "id": "battle_mage",
+      "name": "Battle Mage",
+      "normal380": 82501,
+      "attackBase": 2312,
+      "orders": {
+        "fragments": 212,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 79764
+        },
+        {
+          "atk": 2356,
+          "score": 83063
+        },
+        {
+          "atk": 2312,
+          "score": 82501
+        }
+      ]
+    },
+    {
+      "id": "bishop",
+      "name": "Bishop",
+      "normal380": 82501,
+      "attackBase": 2162,
+      "orders": {
+        "fragments": 180,
+        "erda": 88
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 81632
+        },
+        {
+          "atk": 2177,
+          "score": 82709
+        },
+        {
+          "atk": 2162,
+          "score": 82501
+        }
+      ]
+    },
+    {
+      "id": "blaster",
+      "name": "Blaster",
+      "normal380": 82539,
+      "attackBase": 1770,
+      "orders": {
+        "fragments": 200,
+        "erda": 91
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 87698
+        },
+        {
+          "atk": 1698,
+          "score": 81368
+        },
+        {
+          "atk": 1770,
+          "score": 82539
+        }
+      ]
+    },
+    {
+      "id": "blaze_wizard",
+      "name": "Blaze Wizard",
+      "normal380": 82494,
+      "attackBase": 2019,
+      "orders": {
+        "fragments": 206,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 83637
+        },
+        {
+          "atk": 2003,
+          "score": 82267
+        },
+        {
+          "atk": 2019,
+          "score": 82494
+        }
+      ]
+    },
+    {
+      "id": "bowmaster",
+      "name": "Bowmaster",
+      "normal380": 82515,
+      "attackBase": 1950,
+      "orders": {
+        "fragments": 212,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 84670
+        },
+        {
+          "atk": 1920,
+          "score": 82072
+        },
+        {
+          "atk": 1950,
+          "score": 82515
+        }
+      ]
+    },
+    {
+      "id": "buccaneer",
+      "name": "Buccaneer",
+      "normal380": 82513,
+      "attackBase": 1904,
+      "orders": {
+        "fragments": 209,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 85331
+        },
+        {
+          "atk": 1869,
+          "score": 81996
+        },
+        {
+          "atk": 1904,
+          "score": 82513
+        }
+      ]
+    },
+    {
+      "id": "cadena",
+      "name": "Cadena",
+      "normal380": 82495,
+      "attackBase": 1971,
+      "orders": {
+        "fragments": 188,
+        "erda": 87
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 84410
+        },
+        {
+          "atk": 1941,
+          "score": 82048
+        },
+        {
+          "atk": 1971,
+          "score": 82495
+        }
+      ]
+    },
+    {
+      "id": "cannoneer",
+      "name": "Cannoneer",
+      "normal380": 82506,
+      "attackBase": 1928,
+      "orders": {
+        "fragments": 188,
+        "erda": 89
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 84973
+        },
+        {
+          "atk": 1896,
+          "score": 82043
+        },
+        {
+          "atk": 1928,
+          "score": 82506
+        }
+      ]
+    },
+    {
+      "id": "corsair",
+      "name": "Corsair",
+      "normal380": 82451,
+      "attackBase": 2073,
+      "orders": {
+        "fragments": 208,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 82813
+        },
+        {
+          "atk": 2073,
+          "score": 82451
+        }
+      ]
+    },
+    {
+      "id": "dark_knight",
+      "name": "Dark Knight",
+      "normal380": 82512,
+      "attackBase": 1928,
+      "orders": {
+        "fragments": 212,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 85064
+        },
+        {
+          "atk": 1889,
+          "score": 81924
+        },
+        {
+          "atk": 1928,
+          "score": 82512
+        }
+      ]
+    },
+    {
+      "id": "dawn_warrior",
+      "name": "Dawn Warrior",
+      "normal380": 82508,
+      "attackBase": 1967,
+      "orders": {
+        "fragments": 199,
+        "erda": 90
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 84450
+        },
+        {
+          "atk": 1938,
+          "score": 82075
+        },
+        {
+          "atk": 1967,
+          "score": 82508
+        }
+      ]
+    },
+    {
+      "id": "demon_avenger",
+      "name": "Demon Avenger",
+      "normal380": 82590,
+      "attackBase": 19525,
+      "orders": {
+        "fragments": 207,
+        "erda": 92
+      },
+      "changed": {
+        "fragments": true,
+        "erda": false
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 34902
+        },
+        {
+          "atk": 31397,
+          "score": 99929
+        },
+        {
+          "atk": 23545,
+          "score": 89512
+        },
+        {
+          "atk": 18260,
+          "score": 80294
+        },
+        {
+          "atk": 19525,
+          "score": 82590
+        }
+      ]
+    },
+    {
+      "id": "demon_slayer",
+      "name": "Demon Slayer",
+      "normal380": 82513,
+      "attackBase": 1960,
+      "orders": {
+        "fragments": 212,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 84565
+        },
+        {
+          "atk": 1928,
+          "score": 82032
+        },
+        {
+          "atk": 1960,
+          "score": 82513
+        }
+      ]
+    },
+    {
+      "id": "dual_blade",
+      "name": "Dual Blade",
+      "normal380": 82504,
+      "attackBase": 2042,
+      "orders": {
+        "fragments": 198,
+        "erda": 89
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 83352
+        },
+        {
+          "atk": 2027,
+          "score": 82284
+        },
+        {
+          "atk": 2042,
+          "score": 82504
+        }
+      ]
+    },
+    {
+      "id": "erel",
+      "name": "Erel",
+      "normal380": 82509,
+      "attackBase": 1970,
+      "orders": {
+        "fragments": 132,
+        "erda": 61
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 84468
+        },
+        {
+          "atk": 1936,
+          "score": 81991
+        },
+        {
+          "atk": 1970,
+          "score": 82509
+        }
+      ]
+    },
+    {
+      "id": "evan",
+      "name": "Evan",
+      "normal380": 82514,
+      "attackBase": 2371,
+      "orders": {
+        "fragments": 203,
+        "erda": 92
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 79047
+        },
+        {
+          "atk": 2428,
+          "score": 83232
+        },
+        {
+          "atk": 2371,
+          "score": 82514
+        }
+      ]
+    },
+    {
+      "id": "hayato",
+      "name": "Hayato",
+      "normal380": 82507,
+      "attackBase": 2050,
+      "orders": {
+        "fragments": 168,
+        "erda": 75
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 83235
+        },
+        {
+          "atk": 2037,
+          "score": 82312
+        },
+        {
+          "atk": 2050,
+          "score": 82507
+        }
+      ]
+    },
+    {
+      "id": "hero",
+      "name": "Hero",
+      "normal380": 82524,
+      "attackBase": 1821,
+      "orders": {
+        "fragments": 212,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 86827
+        },
+        {
+          "atk": 1759,
+          "score": 81532
+        },
+        {
+          "atk": 1821,
+          "score": 82524
+        }
+      ]
+    },
+    {
+      "id": "hoyoung",
+      "name": "Hoyoung",
+      "normal380": 82368,
+      "attackBase": 2049,
+      "orders": {
+        "fragments": 208,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 83093
+        },
+        {
+          "atk": 2049,
+          "score": 82368
+        }
+      ]
+    },
+    {
+      "id": "illium",
+      "name": "Illium",
+      "normal380": 82446,
+      "attackBase": 2041,
+      "orders": {
+        "fragments": 210,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 83187
+        },
+        {
+          "atk": 2041,
+          "score": 82446
+        }
+      ]
+    },
+    {
+      "id": "kain",
+      "name": "Kain",
+      "normal380": 82503,
+      "attackBase": 1988,
+      "orders": {
+        "fragments": 212,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 84110
+        },
+        {
+          "atk": 1965,
+          "score": 82170
+        },
+        {
+          "atk": 1988,
+          "score": 82503
+        }
+      ]
+    },
+    {
+      "id": "kaiser",
+      "name": "Kaiser",
+      "normal380": 82506,
+      "attackBase": 2206,
+      "orders": {
+        "fragments": 212,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 81056
+        },
+        {
+          "atk": 2231,
+          "score": 82847
+        },
+        {
+          "atk": 2206,
+          "score": 82506
+        }
+      ]
+    },
+    {
+      "id": "kanna",
+      "name": "Kanna",
+      "normal380": 82507,
+      "attackBase": 2237,
+      "orders": {
+        "fragments": 166,
+        "erda": 75
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 80549
+        },
+        {
+          "atk": 2279,
+          "score": 83095
+        },
+        {
+          "atk": 2237,
+          "score": 82507
+        }
+      ]
+    },
+    {
+      "id": "khali",
+      "name": "Khali",
+      "normal380": 82368,
+      "attackBase": 1979,
+      "orders": {
+        "fragments": 202,
+        "erda": 91
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 83936
+        },
+        {
+          "atk": 1979,
+          "score": 82368
+        }
+      ]
+    },
+    {
+      "id": "kinesis",
+      "name": "Kinesis",
+      "normal380": 82553,
+      "attackBase": 2120,
+      "orders": {
+        "fragments": 204,
+        "erda": 91
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 82272
+        },
+        {
+          "atk": 2120,
+          "score": 82553
+        }
+      ]
+    },
+    {
+      "id": "lara",
+      "name": "Lara",
+      "normal380": 82507,
+      "attackBase": 1954,
+      "orders": {
+        "fragments": 188,
+        "erda": 87
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 84695
+        },
+        {
+          "atk": 1918,
+          "score": 81961
+        },
+        {
+          "atk": 1954,
+          "score": 82507
+        }
+      ]
+    },
+    {
+      "id": "lethe",
+      "name": "Lethe",
+      "normal380": 82510,
+      "attackBase": 1937,
+      "orders": {
+        "fragments": 196,
+        "erda": 91
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 84981
+        },
+        {
+          "atk": 1896,
+          "score": 81873
+        },
+        {
+          "atk": 1937,
+          "score": 82510
+        }
+      ]
+    },
+    {
+      "id": "luminous",
+      "name": "Luminous",
+      "normal380": 82505,
+      "attackBase": 1948,
+      "orders": {
+        "fragments": 209,
+        "erda": 94
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 84812
+        },
+        {
+          "atk": 1909,
+          "score": 81900
+        },
+        {
+          "atk": 1948,
+          "score": 82505
+        }
+      ]
+    },
+    {
+      "id": "lynn",
+      "name": "Lynn",
+      "normal380": 82498,
+      "attackBase": 2193,
+      "orders": {
+        "fragments": 147,
+        "erda": 68
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 81293
+        },
+        {
+          "atk": 2208,
+          "score": 82690
+        },
+        {
+          "atk": 2193,
+          "score": 82498
+        }
+      ]
+    },
+    {
+      "id": "marksman",
+      "name": "Marksman",
+      "normal380": 82516,
+      "attackBase": 1907,
+      "orders": {
+        "fragments": 212,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 85401
+        },
+        {
+          "atk": 1864,
+          "score": 81859
+        },
+        {
+          "atk": 1907,
+          "score": 82516
+        }
+      ]
+    },
+    {
+      "id": "mechanic",
+      "name": "Mechanic",
+      "normal380": 82568,
+      "attackBase": 1637,
+      "orders": {
+        "fragments": 212,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 89650
+        },
+        {
+          "atk": 1570,
+          "score": 81465
+        },
+        {
+          "atk": 1637,
+          "score": 82568
+        }
+      ]
+    },
+    {
+      "id": "mercedes",
+      "name": "Mercedes",
+      "normal380": 82428,
+      "attackBase": 2100,
+      "orders": {
+        "fragments": 188,
+        "erda": 88
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 82428
+        }
+      ]
+    },
+    {
+      "id": "mihile",
+      "name": "Mihile",
+      "normal380": 82503,
+      "attackBase": 1959,
+      "orders": {
+        "fragments": 212,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 84559
+        },
+        {
+          "atk": 1929,
+          "score": 82059
+        },
+        {
+          "atk": 1959,
+          "score": 82503
+        }
+      ]
+    },
+    {
+      "id": "mo_xuan",
+      "name": "Mo Xuan",
+      "normal380": 82504,
+      "attackBase": 1979,
+      "orders": {
+        "fragments": 168,
+        "erda": 77
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 84179
+        },
+        {
+          "atk": 1959,
+          "score": 82221
+        },
+        {
+          "atk": 1979,
+          "score": 82504
+        }
+      ]
+    },
+    {
+      "id": "night_lord",
+      "name": "Night Lord",
+      "normal380": 82540,
+      "attackBase": 1750,
+      "orders": {
+        "fragments": 198,
+        "erda": 89
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 88032
+        },
+        {
+          "atk": 1675,
+          "score": 81309
+        },
+        {
+          "atk": 1750,
+          "score": 82540
+        }
+      ]
+    },
+    {
+      "id": "night_walker",
+      "name": "Night Walker",
+      "normal380": 82515,
+      "attackBase": 1802,
+      "orders": {
+        "fragments": 218,
+        "erda": 95
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 86919
+        },
+        {
+          "atk": 1752,
+          "score": 81752
+        },
+        {
+          "atk": 1802,
+          "score": 82515
+        }
+      ]
+    },
+    {
+      "id": "paladin",
+      "name": "Paladin",
+      "normal380": 82564,
+      "attackBase": 1689,
+      "orders": {
+        "fragments": 216,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 88990
+        },
+        {
+          "atk": 1612,
+          "score": 81283
+        },
+        {
+          "atk": 1689,
+          "score": 82564
+        }
+      ]
+    },
+    {
+      "id": "pathfinder",
+      "name": "Pathfinder",
+      "normal380": 82504,
+      "attackBase": 1910,
+      "orders": {
+        "fragments": 188,
+        "erda": 90
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 85241
+        },
+        {
+          "atk": 1876,
+          "score": 82003
+        },
+        {
+          "atk": 1910,
+          "score": 82504
+        }
+      ]
+    },
+    {
+      "id": "phantom",
+      "name": "Phantom",
+      "normal380": 82517,
+      "attackBase": 1852,
+      "orders": {
+        "fragments": 209,
+        "erda": 94
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 86267
+        },
+        {
+          "atk": 1799,
+          "score": 81703
+        },
+        {
+          "atk": 1852,
+          "score": 82517
+        }
+      ]
+    },
+    {
+      "id": "ren",
+      "name": "Ren",
+      "normal380": 82555,
+      "attackBase": 1771,
+      "orders": {
+        "fragments": 212,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 87809
+        },
+        {
+          "atk": 1690,
+          "score": 81200
+        },
+        {
+          "atk": 1771,
+          "score": 82555
+        }
+      ]
+    },
+    {
+      "id": "shade",
+      "name": "Shade",
+      "normal380": 82506,
+      "attackBase": 1972,
+      "orders": {
+        "fragments": 209,
+        "erda": 94
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 84353
+        },
+        {
+          "atk": 1945,
+          "score": 82111
+        },
+        {
+          "atk": 1972,
+          "score": 82506
+        }
+      ]
+    },
+    {
+      "id": "shadower",
+      "name": "Shadower",
+      "normal380": 82493,
+      "attackBase": 2013,
+      "orders": {
+        "fragments": 198,
+        "erda": 89
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 83741
+        },
+        {
+          "atk": 1995,
+          "score": 82238
+        },
+        {
+          "atk": 2013,
+          "score": 82493
+        }
+      ]
+    },
+    {
+      "id": "sia",
+      "name": "Sia",
+      "normal380": 82499,
+      "attackBase": 2184,
+      "orders": {
+        "fragments": 128,
+        "erda": 60
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 81315
+        },
+        {
+          "atk": 2206,
+          "score": 82810
+        },
+        {
+          "atk": 2184,
+          "score": 82499
+        }
+      ]
+    },
+    {
+      "id": "thunder_breaker",
+      "name": "Thunder Breaker",
+      "normal380": 82510,
+      "attackBase": 1951,
+      "orders": {
+        "fragments": 203,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 84621
+        },
+        {
+          "atk": 1924,
+          "score": 82124
+        },
+        {
+          "atk": 1951,
+          "score": 82510
+        }
+      ]
+    },
+    {
+      "id": "wild_hunter",
+      "name": "Wild Hunter",
+      "normal380": 82509,
+      "attackBase": 2013,
+      "orders": {
+        "fragments": 223,
+        "erda": 96
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 83767
+        },
+        {
+          "atk": 1993,
+          "score": 82217
+        },
+        {
+          "atk": 2013,
+          "score": 82509
+        }
+      ]
+    },
+    {
+      "id": "wind_archer",
+      "name": "Wind Archer",
+      "normal380": 82501,
+      "attackBase": 2193,
+      "orders": {
+        "fragments": 211,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 81237
+        },
+        {
+          "atk": 2214,
+          "score": 82786
+        },
+        {
+          "atk": 2193,
+          "score": 82501
+        }
+      ]
+    },
+    {
+      "id": "xenon",
+      "name": "Xenon",
+      "normal380": 82446,
+      "attackBase": 2046,
+      "orders": {
+        "fragments": 212,
+        "erda": 94
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 83127
+        },
+        {
+          "atk": 2046,
+          "score": 82446
+        }
+      ]
+    },
+    {
+      "id": "zero",
+      "name": "Zero",
+      "normal380": 82538,
+      "attackBase": 1799,
+      "orders": {
+        "fragments": 213,
+        "erda": 93
+      },
+      "changed": {
+        "fragments": true,
+        "erda": true
+      },
+      "calibration": [
+        {
+          "atk": 2100,
+          "score": 87090
+        },
+        {
+          "atk": 1740,
+          "score": 81604
+        },
+        {
+          "atk": 1799,
+          "score": 82538
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "classes": 54,
+    "orders": 108,
+    "sourceMilestones": 15593,
+    "progressionScenarios": 3672,
+    "fullOrderScenarios": 432,
+    "forecastCases": 432,
+    "completeNodeCoverage": true,
+    "normal380Range": [
+      82368,
+      82590
+    ]
+  }
+}
