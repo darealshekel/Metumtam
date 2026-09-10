@@ -1,0 +1,380 @@
+[
+  {
+    "id": "adele",
+    "name": "Adele",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Adele.png",
+    "page": "https://maplestorywiki.net/w/Adele",
+    "local": "assets/classes/adele.png"
+  },
+  {
+    "id": "angelic_buster",
+    "name": "Angelic Buster",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Angelic_Buster.png",
+    "page": "https://maplestorywiki.net/w/Angelic_Buster",
+    "local": "assets/classes/angelic_buster.png"
+  },
+  {
+    "id": "aran",
+    "name": "Aran",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Aran.png",
+    "page": "https://maplestorywiki.net/w/Aran",
+    "local": "assets/classes/aran.png"
+  },
+  {
+    "id": "arch_mage_fire_poison",
+    "name": "Arch Mage (Fire, Poison)",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Arch_Mage_%28Fire%2C_Poison%29.png",
+    "page": "https://maplestorywiki.net/w/Arch_Mage_(Fire,_Poison)",
+    "local": "assets/classes/arch_mage_fire_poison.png"
+  },
+  {
+    "id": "arch_mage_ice_lightning",
+    "name": "Arch Mage (Ice, Lightning)",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Arch_Mage_%28Ice%2C_Lightning%29.png",
+    "page": "https://maplestorywiki.net/w/Arch_Mage_(Ice,_Lightning)",
+    "local": "assets/classes/arch_mage_ice_lightning.png"
+  },
+  {
+    "id": "ark",
+    "name": "Ark",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Ark.png",
+    "page": "https://maplestorywiki.net/w/Ark",
+    "local": "assets/classes/ark.png"
+  },
+  {
+    "id": "battle_mage",
+    "name": "Battle Mage",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Battle_Mage.png",
+    "page": "https://maplestorywiki.net/w/Battle_Mage",
+    "local": "assets/classes/battle_mage.png"
+  },
+  {
+    "id": "bishop",
+    "name": "Bishop",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Bishop.png",
+    "page": "https://maplestorywiki.net/w/Bishop",
+    "local": "assets/classes/bishop.png"
+  },
+  {
+    "id": "blaster",
+    "name": "Blaster",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Blaster.png",
+    "page": "https://maplestorywiki.net/w/Blaster",
+    "local": "assets/classes/blaster.png"
+  },
+  {
+    "id": "blaze_wizard",
+    "name": "Blaze Wizard",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Blaze_Wizard.png",
+    "page": "https://maplestorywiki.net/w/Blaze_Wizard",
+    "local": "assets/classes/blaze_wizard.png"
+  },
+  {
+    "id": "bowmaster",
+    "name": "Bowmaster",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Bow_Master.png",
+    "page": "https://maplestorywiki.net/w/Bow_Master",
+    "local": "assets/classes/bowmaster.png"
+  },
+  {
+    "id": "buccaneer",
+    "name": "Buccaneer",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Buccaneer.png",
+    "page": "https://maplestorywiki.net/w/Buccaneer",
+    "local": "assets/classes/buccaneer.png"
+  },
+  {
+    "id": "cadena",
+    "name": "Cadena",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Cadena.png",
+    "page": "https://maplestorywiki.net/w/Cadena",
+    "local": "assets/classes/cadena.png"
+  },
+  {
+    "id": "cannoneer",
+    "name": "Cannoneer",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Cannoneer.png",
+    "page": "https://maplestorywiki.net/w/Cannoneer",
+    "local": "assets/classes/cannoneer.png"
+  },
+  {
+    "id": "corsair",
+    "name": "Corsair",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Corsair.png",
+    "page": "https://maplestorywiki.net/w/Corsair",
+    "local": "assets/classes/corsair.png"
+  },
+  {
+    "id": "dark_knight",
+    "name": "Dark Knight",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Dark_Knight.png",
+    "page": "https://maplestorywiki.net/w/Dark_Knight",
+    "local": "assets/classes/dark_knight.png"
+  },
+  {
+    "id": "dawn_warrior",
+    "name": "Dawn Warrior",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Dawn_Warrior.png",
+    "page": "https://maplestorywiki.net/w/Dawn_Warrior",
+    "local": "assets/classes/dawn_warrior.png"
+  },
+  {
+    "id": "demon_avenger",
+    "name": "Demon Avenger",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Demon_Avenger.png",
+    "page": "https://maplestorywiki.net/w/Demon_Avenger",
+    "local": "assets/classes/demon_avenger.png"
+  },
+  {
+    "id": "demon_slayer",
+    "name": "Demon Slayer",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Demon_Slayer.png",
+    "page": "https://maplestorywiki.net/w/Demon_Slayer",
+    "local": "assets/classes/demon_slayer.png"
+  },
+  {
+    "id": "dual_blade",
+    "name": "Dual Blade",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Dual_Blade.png",
+    "page": "https://maplestorywiki.net/w/Dual_Blade",
+    "local": "assets/classes/dual_blade.png"
+  },
+  {
+    "id": "erel",
+    "name": "Erel",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Erel_Light.png",
+    "page": "https://maplestorywiki.net/w/Erel_Light",
+    "local": "assets/classes/erel.png"
+  },
+  {
+    "id": "evan",
+    "name": "Evan",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Evan.png",
+    "page": "https://maplestorywiki.net/w/Evan",
+    "local": "assets/classes/evan.png"
+  },
+  {
+    "id": "hayato",
+    "name": "Hayato",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Hayato.png",
+    "page": "https://maplestorywiki.net/w/Hayato",
+    "local": "assets/classes/hayato.png"
+  },
+  {
+    "id": "hero",
+    "name": "Hero",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Hero.png",
+    "page": "https://maplestorywiki.net/w/Hero",
+    "local": "assets/classes/hero.png"
+  },
+  {
+    "id": "hoyoung",
+    "name": "Hoyoung",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Hoyoung.png",
+    "page": "https://maplestorywiki.net/w/Hoyoung",
+    "local": "assets/classes/hoyoung.png"
+  },
+  {
+    "id": "illium",
+    "name": "Illium",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Illium.png",
+    "page": "https://maplestorywiki.net/w/Illium",
+    "local": "assets/classes/illium.png"
+  },
+  {
+    "id": "kain",
+    "name": "Kain",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Kain.png",
+    "page": "https://maplestorywiki.net/w/Kain",
+    "local": "assets/classes/kain.png"
+  },
+  {
+    "id": "kaiser",
+    "name": "Kaiser",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Kaiser.png",
+    "page": "https://maplestorywiki.net/w/Kaiser",
+    "local": "assets/classes/kaiser.png"
+  },
+  {
+    "id": "kanna",
+    "name": "Kanna",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Kanna.png",
+    "page": "https://maplestorywiki.net/w/Kanna",
+    "local": "assets/classes/kanna.png"
+  },
+  {
+    "id": "khali",
+    "name": "Khali",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Khali.png",
+    "page": "https://maplestorywiki.net/w/Khali",
+    "local": "assets/classes/khali.png"
+  },
+  {
+    "id": "kinesis",
+    "name": "Kinesis",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Kinesis.png",
+    "page": "https://maplestorywiki.net/w/Kinesis",
+    "local": "assets/classes/kinesis.png"
+  },
+  {
+    "id": "lara",
+    "name": "Lara",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Lara.png",
+    "page": "https://maplestorywiki.net/w/Lara",
+    "local": "assets/classes/lara.png"
+  },
+  {
+    "id": "lethe",
+    "name": "Lethe",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Lethe.png",
+    "page": "https://maplestorywiki.net/w/Lethe",
+    "local": "assets/classes/lethe.png"
+  },
+  {
+    "id": "luminous",
+    "name": "Luminous",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Luminous.png",
+    "page": "https://maplestorywiki.net/w/Luminous",
+    "local": "assets/classes/luminous.png"
+  },
+  {
+    "id": "lynn",
+    "name": "Lynn",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Lynn.png",
+    "page": "https://maplestorywiki.net/w/Lynn",
+    "local": "assets/classes/lynn.png"
+  },
+  {
+    "id": "marksman",
+    "name": "Marksman",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Marksman.png",
+    "page": "https://maplestorywiki.net/w/Marksman",
+    "local": "assets/classes/marksman.png"
+  },
+  {
+    "id": "mechanic",
+    "name": "Mechanic",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Mechanic.png",
+    "page": "https://maplestorywiki.net/w/Mechanic",
+    "local": "assets/classes/mechanic.png"
+  },
+  {
+    "id": "mercedes",
+    "name": "Mercedes",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Mercedes.png",
+    "page": "https://maplestorywiki.net/w/Mercedes",
+    "local": "assets/classes/mercedes.png"
+  },
+  {
+    "id": "mihile",
+    "name": "Mihile",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Mihile.png",
+    "page": "https://maplestorywiki.net/w/Mihile",
+    "local": "assets/classes/mihile.png"
+  },
+  {
+    "id": "mo_xuan",
+    "name": "Mo Xuan",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Mo_Xuan.png",
+    "page": "https://maplestorywiki.net/w/Mo_Xuan",
+    "local": "assets/classes/mo_xuan.png"
+  },
+  {
+    "id": "night_lord",
+    "name": "Night Lord",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Night_Lord.png",
+    "page": "https://maplestorywiki.net/w/Night_Lord",
+    "local": "assets/classes/night_lord.png"
+  },
+  {
+    "id": "night_walker",
+    "name": "Night Walker",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Night_Walker.png",
+    "page": "https://maplestorywiki.net/w/Night_Walker",
+    "local": "assets/classes/night_walker.png"
+  },
+  {
+    "id": "paladin",
+    "name": "Paladin",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Paladin.png",
+    "page": "https://maplestorywiki.net/w/Paladin",
+    "local": "assets/classes/paladin.png"
+  },
+  {
+    "id": "pathfinder",
+    "name": "Pathfinder",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Pathfinder.png",
+    "page": "https://maplestorywiki.net/w/Pathfinder",
+    "local": "assets/classes/pathfinder.png"
+  },
+  {
+    "id": "phantom",
+    "name": "Phantom",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Phantom.png",
+    "page": "https://maplestorywiki.net/w/Phantom",
+    "local": "assets/classes/phantom.png"
+  },
+  {
+    "id": "ren",
+    "name": "Ren",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Ren.png",
+    "page": "https://maplestorywiki.net/w/Ren",
+    "local": "assets/classes/ren.png"
+  },
+  {
+    "id": "shade",
+    "name": "Shade",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Shade.png",
+    "page": "https://maplestorywiki.net/w/Shade",
+    "local": "assets/classes/shade.png"
+  },
+  {
+    "id": "shadower",
+    "name": "Shadower",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Shadower.png",
+    "page": "https://maplestorywiki.net/w/Shadower",
+    "local": "assets/classes/shadower.png"
+  },
+  {
+    "id": "sia",
+    "name": "Sia",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Sia_Astelle.png",
+    "page": "https://maplestorywiki.net/w/Sia_Astelle",
+    "local": "assets/classes/sia.png"
+  },
+  {
+    "id": "thunder_breaker",
+    "name": "Thunder Breaker",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Thunder_Breaker.png",
+    "page": "https://maplestorywiki.net/w/Thunder_Breaker",
+    "local": "assets/classes/thunder_breaker.png"
+  },
+  {
+    "id": "wild_hunter",
+    "name": "Wild Hunter",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Wild_Hunter.png",
+    "page": "https://maplestorywiki.net/w/Wild_Hunter",
+    "local": "assets/classes/wild_hunter.png"
+  },
+  {
+    "id": "wind_archer",
+    "name": "Wind Archer",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Wind_Archer.png",
+    "page": "https://maplestorywiki.net/w/Wind_Archer",
+    "local": "assets/classes/wind_archer.png"
+  },
+  {
+    "id": "xenon",
+    "name": "Xenon",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Xenon.png",
+    "page": "https://maplestorywiki.net/w/Xenon",
+    "local": "assets/classes/xenon.png"
+  },
+  {
+    "id": "zero",
+    "name": "Zero",
+    "source": "https://media.maplestorywiki.net/yetidb/ClassButton_Zero.png",
+    "page": "https://maplestorywiki.net/w/Zero",
+    "local": "assets/classes/zero.png"
+  }
+]

@@ -8,3 +8,5 @@ MapleStory players compare exported class upgrade orders, enter their existing n
 
 ## Design principles
 Preserve the user's requested in-game HEXA matrix layout and class-specific icons. Keep the roadmap above the matrix. Use familiar game terminology, readable level inputs, and explicit material costs. Descriptions must come from the bundled wiki snapshot; missing descriptions are marked unavailable. Hover overlays must never prevent selecting another skill. Full descriptions belong in a scrollable selected-node panel. Retain keyboard controls and phone access. Avoid decorative motion that slows frequent upgrades.
+
+The current library uses clickable class artwork with accessible class names and working search/category filters. Branding is a plain lowercase metumtam wordmark. Progress precedes HEXA Order. Legal pages are accessible from the footer; About and Export actions are removed.

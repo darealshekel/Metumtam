@@ -6,9 +6,9 @@ Hover a skill for a compact MapleStory Wiki preview. It never intercepts pointer
 
 The Skill description button, skill-list icons, and milestone details also open complete descriptions with keyboard and phone access. Related mastery skills are grouped together. Third common and third skill nodes, plus unmatched wiki entries, show an explicit unavailable state. See [skill data attribution and coverage](SKILL-DATA-NOTICE.md).
 
-Live website: [Metumtam](https://darealshekel.github.io/hatzelu/)
+Live website: [Metumtam](https://darealshekel.github.io/Metumtam/)
 
-The purple theme retains the existing GitHub Pages address and browser storage. The material/enhancement panel aligns with the matrix board on desktop and stacks beneath it on phones. Forecasts support one weekly dungeon (None: 0, High Mountain: 40, Angler Company: 55, Nightmare Paradise: 70 fragments), an optional weekly quest worth 90 fragments, and other weekly income. Selections are saved per class and included in plan exports. The displayed daily average adds weekly rewards divided by seven; days remaining round up after deducting owned fragments, and the estimated completion date adds those days to the browser's local calendar date. This is a rate-based forecast, not a weekly-reset schedule or a guarantee of completion.
+The purple theme uses a plain metumtam wordmark. The material/enhancement panel aligns with the matrix board on desktop and stacks beneath it on phones. Forecasts support one weekly dungeon (None: 0, High Mountain: 40, Angler Company: 55, Nightmare Paradise: 70 fragments), an optional weekly quest worth 90 fragments, and other weekly income. Selections are saved per class and accepted in imported plans. The displayed daily average adds weekly rewards divided by seven; days remaining round up after deducting owned fragments, and the estimated completion date adds those days to the browser's local calendar date. This is a rate-based forecast, not a weekly-reset schedule or a guarantee of completion.
 
 ## Open it
 
@@ -29,7 +29,7 @@ To add it to your website, copy this entire directory to a static route such as 
 - Upgrade roadmap directly above the matrix, with the next node outlined in purple and pulsing every second.
 - Reduced-motion preferences keep the purple highlight steady.
 - Sol Janus level tracking saved per class, separate from damage-order costs and forecasts.
-- Expandable bulk level editor, with existing reset, import, and export controls.
+- Expandable bulk level editor, with existing reset and import controls.
 
 - Searchable library with orders for all 54 source-listed classes.
 - Separate Erda Fragment Limited (10,763 milestones) and Sol Erda Limited (4,830 milestones) source orders.
@@ -39,7 +39,7 @@ To add it to your website, copy this entire directory to a static route such as 
 - Per-class progress saved in local storage.
 - Read-only class preview, separate from saved progress.
 - Daily/weekly fragment forecast and inventory.
-- Validated JSON plan import/export.
+- Validated JSON plan import.
 - Responsive class drawer, keyboard controls, and reduced-motion support.
 - 633 local skill icons, with fallbacks. Google Fonts is optional; system fonts are used if unavailable.
 
@@ -47,7 +47,7 @@ To add it to your website, copy this entire directory to a static route such as 
 
 - `index.html`: application layout.
 - `styles.css`: responsive styles and theme variables.
-- `app.js`: UI, state, local storage, and import/export.
+- `app.js`: UI, state, local storage, and import.
 - `engine.js`: cost and progression calculations, also usable from Node.js.
 - `matrix.js`: fixed matrix slots, class icons, locked states, stat dock, and node selection.
 - `matrix.css`: matrix styling, responsive layout, and reduced-motion-aware highlights.
@@ -84,3 +84,5 @@ Matrix validation: all active source cores were represented across 216 class/mod
 View full order opens a responsive icon progression grid for every class. Tiles show target levels or MAX, with distinct HEXA Stat I/II/III labels and row continuation arrows. Selecting a tile opens its milestone costs. The grid uses the current plan, resource mode, and third-core setting. Validation covered 432 class/mode/filter/progress scenarios and 41,232 rendered milestones, plus desktop, 320px, 390px, and 820px browser layouts and tile details.
 
 Matrix levels can be edited directly above each available skill icon. Current and goal fields replace their selected value on typing, remove leading zeros, and preserve the input and caret while the roadmap updates. Enter or leaving an empty field commits the minimum valid level. Values remain capped at the skill maximum. The matrix uses up to 720px normally and 800px on wide screens, with responsive phone sizing. Validation covered 216 class/filter/preview input scenarios, existing cost checks, slow two-digit entry, leading zeros, maximum levels, keyboard clearing, Janus persistence, preview protection, and 320px/390px browser layouts.
+
+The class library uses 54 clickable wiki class artwork tiles with name search and category filters. HEXA progress appears above HEXA Order. Terms of Service and Privacy are linked in the footer. The About the data and Export plan buttons have been removed.

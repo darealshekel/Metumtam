@@ -11,3 +11,5 @@ Changes: HTML was converted to plain text, duplicate min/max and full-level tabl
 The snapshot includes 53 class skill pages and descriptions matched to 516 class-specific nodes, plus shared Sol Janus and Sol Hecate skills. Third common and third skill node descriptions are intentionally unavailable. Erel's placeholder source names and Kinesis's unmatched fourth boost node are left unavailable; Lethe's wiki skill page was unavailable at collection time. The source class-page link is still provided. Descriptions can reflect different regional patches from the planner's English labels.
 
 Locked nodes preview level 1. Matrix and skill-list descriptions use current levels; roadmap descriptions use milestone target levels. If an exact level's effects are absent, the UI says so rather than estimating them.
+
+Class library artwork: 54 original class buttons from the [Characters and Skills gallery](https://maplestorywiki.net/w/Characters_and_Skills), retrieved on September 11, 2026. Local images are unchanged. Individual source URLs are recorded in `class-art.json`. Artwork and trademarks remain the property of their respective owners.
