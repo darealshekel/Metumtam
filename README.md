@@ -1,6 +1,6 @@
 # hatzelu
 
-A responsive, standalone MapleStory HEXA planner using the exported MapleScouter orders.
+A responsive MapleStory HEXA planner with a game-style matrix and exported MapleScouter orders.
 
 Live website: [hatzelu](https://darealshekel.github.io/hatzelu/)
 
@@ -18,6 +18,13 @@ To add it to your website, copy this entire directory to a static route such as 
 
 ## Included
 
+- Interactive class-specific HEXA matrix arranged like the supplied in-game reference.
+- Gray icons for locked nodes, colored unlocked nodes, level badges, and click-to-edit current/target levels.
+- Upgrade roadmap directly above the matrix, with the next node outlined in purple and pulsing every second.
+- Reduced-motion preferences keep the purple highlight steady.
+- Sol Janus level tracking saved per class, separate from damage-order costs and forecasts.
+- Expandable bulk level editor, with existing reset, import, and export controls.
+
 - Searchable library with orders for all 54 source-listed classes.
 - Separate Erda Fragment Limited (10,763 milestones) and Sol Erda Limited (4,830 milestones) source orders.
 - Third skill core toggle, excluded by default for the requested GMS setup. Hidden levels stay saved.
@@ -28,7 +35,7 @@ To add it to your website, copy this entire directory to a static route such as 
 - Daily/weekly fragment forecast and inventory.
 - Validated JSON plan import/export.
 - Responsive class drawer, keyboard controls, and reduced-motion support.
-- 632 local skill icons, with fallbacks. Google Fonts is optional; system fonts are used if unavailable.
+- 633 local skill icons, with fallbacks. Google Fonts is optional; system fonts are used if unavailable.
 
 ## Files
 
@@ -36,6 +43,8 @@ To add it to your website, copy this entire directory to a static route such as 
 - `styles.css`: responsive styles and theme variables.
 - `app.js`: UI, state, local storage, and import/export.
 - `engine.js`: cost and progression calculations, also usable from Node.js.
+- `matrix.js`: fixed matrix slots, class icons, locked states, stat dock, and node selection.
+- `matrix.css`: matrix styling, responsive layout, and reduced-motion-aware highlights.
 - `data.js`: the exported source orders, per-level cost tables, and class metadata.
 - `assets/`: local skill icons.
 - `translations/nexon-v271-common-nodes.json`: official third common-node names and class mappings from Nexon’s v.271 patch notes.
@@ -63,3 +72,5 @@ All 15,593 source milestones across both modes matched the cost engine. All 54 c
 
 
 Third common-node labels use the [official Nexon v.271 table](https://www.nexon.com/maplestory/news/update/44597/updated-9-10-v-271-maple-story-x-frieren-beyond-journey-s-end-patch-notes#HEXASkill3rdCommonNode). The mapping covers 51 listed classes and updates the 47 that have this node in the exported orders. Names for Lynn, Mo Xuan, Kanna, and Hayato are retained in the translation catalog, but no absent upgrade milestones are invented. Lethe is not listed and keeps its original Korean name. Nexon’s table currently spells the Demon node “HEXA Defender of the DemonI”; that source spelling is preserved.
+
+Matrix validation: all active source cores were represented across 216 class/mode/third-core combinations. Each unfinished plan has one next-upgrade highlight. Sol Janus persistence and compatibility with older exports were checked, without changing damage costs. Browser checks covered node unlocking, the one-second pulse, level persistence, upgrading/undo, preview isolation, and 320px, 390px, 820px, and desktop layouts without horizontal page overflow.

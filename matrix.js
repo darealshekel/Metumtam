@@ -1,0 +1,33 @@
+(function(root){
+ 'use strict';
+ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const positions=[
+  ['skillCore1',205,180,'skill'],['skillCore2',135,180,'skill'],['skillCore3',170,120,'skill'],['skillCore4',100,120,'skill'],['skillCore5',135,60,'skill'],['skillCore6',65,60,'skill'],
+  ['masteryCore1',305,180,'mastery'],['masteryCore2',338,120,'mastery'],['masteryCore3',407,120,'mastery'],['masteryCore4',442,60,'mastery'],
+  ['reinCore1',205,326,'boost'],['reinCore2',170,386,'boost'],['reinCore3',100,386,'boost'],['reinCore4',65,446,'boost'],
+  ['generalCore1',305,326,'common'],['generalCore2',338,386,'common'],['generalCore3',407,386,'common'],['generalCore4',442,446,'common']
+ ];
+ const janus={id:'generalCore1',name:'Sol Janus',nameKo:'솔 야누스',icon:'assets/sol-janus.png',type:'Common',initial:0,max:30,short:'COMMON 1',hunting:true};
+ const hex='32,2 62,19.5 62,54.5 32,72 2,54.5 2,19.5';
+ const lock='<svg class="matrix-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="10" width="12" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v3"/></svg>';
+ function background(){
+  const stars=Array.from({length:65},(_,i)=>{const x=(i*137+29)%500,y=(i*89+53)%500;return `<circle cx="${x}" cy="${y}" r="${i%9===0?1.8:.7}" opacity="${i%3===0?.6:.23}"/>`;}).join('');
+  return `<svg class="matrix-art" viewBox="0 0 500 500" fill="none" aria-hidden="true"><defs><radialGradient id="matrix-aura"><stop stop-color="#8545e5" stop-opacity=".25"/><stop offset="1" stop-color="#8545e5" stop-opacity="0"/></radialGradient><pattern id="matrix-grid" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 0h4v4" stroke="#91b5d8" stroke-opacity=".025"/></pattern></defs><path fill="url(#matrix-grid)" d="M0 0h500v500H0z"/><circle cx="250" cy="250" r="224" fill="url(#matrix-aura)"/><g stroke="#8060d0" opacity=".24"><circle cx="250" cy="250" r="153"/><circle cx="250" cy="250" r="142"/><ellipse cx="250" cy="250" rx="80" ry="156"/><ellipse cx="250" cy="250" rx="153" ry="45" transform="rotate(-30 250 250)"/><ellipse cx="250" cy="250" rx="153" ry="45" transform="rotate(30 250 250)"/><path d="m250 92 137 79v158l-137 79-137-79V171Z M250 92v316 M113 171l274 158 M387 171 113 329"/><path d="m250 150 87 50v100l-87 50-87-50V200Z"/></g><g fill="#8970e1">${stars}<circle cx="160" cy="250" r="13" opacity=".45"/><circle cx="348" cy="250" r="13" opacity=".35"/><circle cx="250" cy="90" r="6" opacity=".65"/><circle cx="250" cy="410" r="6" opacity=".65"/></g><g class="matrix-center-rays" stroke-width="2.5"><path d="m204 226 39-23" stroke="#d394ff"/><path d="m264 204 38 22" stroke="#ffacd8"/><path d="m204 278 39 23" stroke="#9de8fc"/><path d="m264 301 38-22" stroke="#c2c9ff"/></g><g class="matrix-center-sigil"><path d="m250 222 26 15v30l-26 15-26-15v-30Z" stroke="#cbb0ff" stroke-width="2"/><path d="m233 240 8 25 14-34 M260 237v30" stroke="#e8dcff" stroke-width="4"/></g></svg>`;
+ }
+ function nodes(c,options){const enabled=root.HexaEngine.activeCores(c,options);return [janus,...enabled];}
+ function level(core,p){return core.hunting?p.extraLevels.generalCore1:p.levels[core.id];}
+ function render({c,p,next,selected,settings}){
+  const available=nodes(c,settings),byId=Object.fromEntries(available.map(core=>[core.id,core]));
+  const active=byId[selected]||byId[next?.id]||byId.skillCore1||available[0];
+  const buttons=positions.map(([id,x,y,group])=>{
+   const core=byId[id],excluded=id==='skillCore3'&&c.cores.some(s=>s.id===id)&&!settings.includeThirdSkill;
+   const lv=core?level(core,p):0,isNext=next?.id===id;
+   const status=!core?(excluded?'Excluded from this plan':'Not in this class’s source order'):lv===0?'Not unlocked':`Level ${lv} of ${core.max}`;
+   const title=core?`${core.name} · ${status}${isNext?' · Next upgrade':''}`:`${group==='skill'?'Skill':group==='common'?'Common':group==='boost'?'Boost':'Mastery'} core ${id.match(/\d+/)[0]} · ${status}`;
+   return `<button type="button" class="matrix-node node-${group} ${lv===0?'is-locked':''} ${!core?'is-empty':''} ${isNext?'is-next':''} ${active.id===id?'is-selected':''}" style="--node-x:${x/5}%;--node-y:${y/5}%" ${core?`data-matrix-core="${id}" aria-pressed="${active.id===id}"`:'disabled'} aria-label="${esc(title)}" title="${esc(title)}"><span class="node-face"><svg viewBox="0 0 64 74" preserveAspectRatio="none" aria-hidden="true"><polygon class="node-fill" points="${hex}"/><path class="node-facet" d="M32 5 59 21v15L32 21 5 36V21Z"/><polygon class="node-inner" points="32,7 58,22 58,52 32,67 6,52 6,22"/></svg></span><svg class="node-outline" viewBox="0 0 64 74" preserveAspectRatio="none" aria-hidden="true"><polygon points="${hex}"/></svg>${core?`<span class="node-level">${String(lv).padStart(2,'0')}</span><img src="${core.icon}" alt="" width="32" height="32">`:lock}${isNext?'<span class="node-next-tag">NEXT</span>':''}${excluded?'<span class="node-excluded">OFF</span>':''}</button>`;
+  }).join('');
+  const stats=available.filter(core=>core.type==='HEXA Stat').map(core=>`<button type="button" class="matrix-stat ${p.levels[core.id]===0?'is-locked':''} ${next?.id===core.id?'is-next':''} ${active.id===core.id?'is-selected':''}" data-matrix-core="${core.id}" aria-pressed="${active.id===core.id}" aria-label="${esc(core.name)} · ${p.levels[core.id]===0?'Not complete':'Complete'}${next?.id===core.id?' · Next upgrade':''}"><img src="${core.icon}" width="26" height="26" alt=""><span>${esc(core.name)}<small>${p.levels[core.id]===0?'Not complete':'Complete'}</small></span>${next?.id===core.id?'<b>NEXT</b>':''}</button>`).join('');
+  return {selected:active.id,core:active,html:`<div class="matrix-board" role="group" aria-label="${esc(c.name)} HEXA matrix">${background()}${buttons}</div><div class="matrix-legend" aria-label="Node colors"><span class="legend-skill">Skill</span><span class="legend-mastery">Mastery</span><span class="legend-boost">Boost</span><span class="legend-common">Common</span><span class="legend-next">Next upgrade</span></div><div class="matrix-stats" role="group" aria-label="HEXA Stat milestones">${stats}</div>`};
+ }
+ root.HexaMatrix={render,positions,nodes,level,janus};
+})(window);

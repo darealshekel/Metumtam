@@ -1,8 +1,8 @@
 (function(root){
  'use strict';
  const clamp=(v,min,max)=>Math.max(min,Math.min(max,Number.isFinite(Number(v))?Math.floor(Number(v)):min));
- function defaults(c){return {levels:Object.fromEntries(c.cores.map(x=>[x.id,x.initial])),goals:Object.fromEntries(c.cores.map(x=>[x.id,x.max])),daily:100,weekly:0,stock:0};}
- function clean(c,p={}){const d=defaults(c);for(const core of c.cores){d.levels[core.id]=clamp(p.levels?.[core.id]??core.initial,core.initial,core.max);d.goals[core.id]=clamp(p.goals?.[core.id]??core.max,d.levels[core.id],core.max);}for(const key of ['daily','weekly','stock'])d[key]=clamp(p[key]??d[key],0,10000000);return d;}
+ function defaults(c){return {levels:Object.fromEntries(c.cores.map(x=>[x.id,x.initial])),goals:Object.fromEntries(c.cores.map(x=>[x.id,x.max])),daily:100,weekly:0,stock:0,extraLevels:{generalCore1:0}};}
+ function clean(c,p={}){const d=defaults(c);for(const core of c.cores){d.levels[core.id]=clamp(p.levels?.[core.id]??core.initial,core.initial,core.max);d.goals[core.id]=clamp(p.goals?.[core.id]??core.max,d.levels[core.id],core.max);}d.extraLevels.generalCore1=clamp(p.extraLevels?.generalCore1??0,0,30);for(const key of ['daily','weekly','stock'])d[key]=clamp(p[key]??d[key],0,10000000);return d;}
  function cost(c,id,from,to){if(to<=from)return {f:0,e:0};const table=c.costs[id];if(table)return {f:table.f[to]-table.f[from],e:table.e[to]-table.e[from]};const row=c.order.find(s=>s.id===id);return row?{f:row.f,e:row.e}:{f:0,e:0};}
  function settings(value={}){return {orderMode:value?.orderMode==='erda'?'erda':'fragments',includeThirdSkill:value?.includeThirdSkill===true};}
  function activeCores(c,options){const s=settings(options);return c.cores.filter(core=>s.includeThirdSkill||core.id!=='skillCore3');}
