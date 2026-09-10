@@ -30,5 +30,5 @@
   }
   observer=new ResizeObserver(draw);observer.observe(chart);draw();
  }
- root.HexaOrderView={markup,mount,unmount};
+ root.HexaOrderView={markup,mount,unmount,color};
 })(typeof window!=='undefined'?window:globalThis);
