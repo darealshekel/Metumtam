@@ -4,8 +4,8 @@
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <meta name="theme-color" content="#111314"><meta name="description" content="Plan HEXA upgrades, track your skill levels, and calculate fragment costs across 54 MapleStory classes.">
  <title>hatzelu — HEXA matrix</title>
- <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css?v=3"><link rel="stylesheet" href="matrix.css?v=5"><link rel="stylesheet" href="order-view.css?v=6">
- <script defer src="data.js?v=4"></script><script defer src="engine.js?v=5"></script><script defer src="matrix.js?v=5"></script><script defer src="order-view.js?v=6"></script><script defer src="app.js?v=6"></script>
+ <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css?v=3"><link rel="stylesheet" href="matrix.css?v=7"><link rel="stylesheet" href="order-view.css?v=6">
+ <script defer src="data.js?v=4"></script><script defer src="engine.js?v=5"></script><script defer src="matrix.js?v=7"></script><script defer src="order-view.js?v=6"></script><script defer src="app.js?v=7"></script>
 </head>
 <body>
  <a class="skip" href="#main">Skip to planner</a>
@@ -34,7 +34,7 @@
     <div class="workspace-grid">
      <div class="right-column">
       <section class="roadmap-section" aria-labelledby="roadmap-heading"><div class="section-heading"><div><h3 id="roadmap-heading">Upgrade roadmap <span id="roadmap-count" class="count-badge"></span></h3><p>The next milestones in your progression.</p></div><button class="text-button" id="all-order-button">View full order<span data-icon="arrow-right"></span></button></div><div id="roadmap" class="roadmap"></div></section>
-      <section class="matrix-section" aria-labelledby="matrix-heading"><div class="section-heading"><div><h3 id="matrix-heading">HEXA matrix</h3><p>Select a node to edit its level.</p></div><span class="matrix-help">Gray = not unlocked</span></div><div id="matrix-canvas"></div><div id="matrix-selection" class="matrix-selection"></div></section>
+      <section class="matrix-section" aria-labelledby="matrix-heading"><div class="section-heading"><div><h3 id="matrix-heading">HEXA matrix</h3><p>Select a node to edit its level.</p></div><span class="matrix-help">Click a number to edit</span></div><div id="matrix-canvas"></div><div id="matrix-selection" class="matrix-selection"></div></section>
       <details class="bulk-levels"><summary>Edit all skill levels</summary>
       <section class="skills-section" aria-labelledby="skills-heading"><div class="section-heading"><div><h3 id="skills-heading">Skill configuration</h3><p id="skills-caption">Enter your current levels and set your goals.</p></div><button class="subtle-button" id="reset-button"><span data-icon="reset"></span>Reset</button></div><div class="skill-filters" role="group" aria-label="Filter skill type"><button data-filter="All" class="selected" aria-pressed="true">All skills</button><button data-filter="Mastery" aria-pressed="false">Mastery</button><button data-filter="Skill" aria-pressed="false">Skill</button><button data-filter="Boost" aria-pressed="false">Boost</button><button data-filter="Common" aria-pressed="false">Common</button><button data-filter="HEXA Stat" aria-pressed="false">HEXA Stat</button></div><div id="skills-list" class="skills-list"></div><div class="skills-footer"><span><span data-icon="check"></span>Progress stays in your browser</span><button id="import-button" class="text-button">Import a plan<span data-icon="upload"></span></button><input type="file" id="import-file" accept=".json,application/json" hidden></div></section></details>
      </div>
