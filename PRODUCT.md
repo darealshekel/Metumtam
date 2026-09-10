@@ -1,4 +1,4 @@
-# hatzelu
+# Metumtam
 
 ## Register
 Product: an interactive MapleStory HEXA progression planner.

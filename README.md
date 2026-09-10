@@ -1,4 +1,4 @@
-# hatzelu
+# Metumtam
 
 A responsive MapleStory HEXA planner with a game-style matrix and exported MapleScouter orders.
 
@@ -6,7 +6,9 @@ Hover a skill for a compact MapleStory Wiki preview. It never intercepts pointer
 
 The Skill description button, skill-list icons, and milestone details also open complete descriptions with keyboard and phone access. Related mastery skills are grouped together. Third common and third skill nodes, plus unmatched wiki entries, show an explicit unavailable state. See [skill data attribution and coverage](SKILL-DATA-NOTICE.md).
 
-Live website: [hatzelu](https://darealshekel.github.io/hatzelu/)
+Live website: [Metumtam](https://darealshekel.github.io/hatzelu/)
+
+The purple theme retains the existing GitHub Pages address and browser storage. The material/enhancement panel aligns with the matrix board on desktop and stacks beneath it on phones. Forecasts support one weekly dungeon (None: 0, High Mountain: 40, Angler Company: 55, Nightmare Paradise: 70 fragments), an optional weekly quest worth 90 fragments, and other weekly income. Selections are saved per class and included in plan exports. The displayed daily average adds weekly rewards divided by seven; days remaining round up after deducting owned fragments, and the estimated completion date adds those days to the browser's local calendar date. This is a rate-based forecast, not a weekly-reset schedule or a guarantee of completion.
 
 ## Open it
 
