@@ -1,0 +1,13 @@
+(function(root){
+ 'use strict';
+ const clamp=(v,min,max)=>Math.max(min,Math.min(max,Number.isFinite(Number(v))?Math.floor(Number(v)):min));
+ function defaults(c){return {levels:Object.fromEntries(c.cores.map(x=>[x.id,x.initial])),goals:Object.fromEntries(c.cores.map(x=>[x.id,x.max])),daily:100,weekly:0,stock:0};}
+ function clean(c,p={}){const d=defaults(c);for(const core of c.cores){d.levels[core.id]=clamp(p.levels?.[core.id]??core.initial,core.initial,core.max);d.goals[core.id]=clamp(p.goals?.[core.id]??core.max,d.levels[core.id],core.max);}for(const key of ['daily','weekly','stock'])d[key]=clamp(p[key]??d[key],0,10000000);return d;}
+ function cost(c,id,from,to){if(to<=from)return {f:0,e:0};const table=c.costs[id];if(table)return {f:table.f[to]-table.f[from],e:table.e[to]-table.e[from]};const row=c.order.find(s=>s.id===id);return row?{f:row.f,e:row.e}:{f:0,e:0};}
+ function settings(value={}){return {orderMode:value?.orderMode==='erda'?'erda':'fragments',includeThirdSkill:value?.includeThirdSkill===true};}
+ function activeCores(c,options){const s=settings(options);return c.cores.filter(core=>s.includeThirdSkill||core.id!=='skillCore3');}
+ function sourceOrder(c,options){const s=settings(options),order=c.orders?.[s.orderMode]||(s.orderMode==='fragments'?c.order:[]);return order.filter(step=>s.includeThirdSkill||step.id!=='skillCore3');}
+ function plan(c,p,options){const levels={...p.levels},rows=[];let totalF=0,totalE=0;for(const step of sourceOrder(c,options)){const target=Math.min(step.to,p.goals[step.id]);if(target<=levels[step.id])continue;const from=levels[step.id],price=cost(c,step.id,from,target);totalF+=price.f;totalE+=price.e;rows.push({...step,from,to:target,f:price.f,e:price.e,totalF,totalE});levels[step.id]=target;}return rows;}
+ function summary(c,p,options){let spentF=0,totalF=0,spentE=0,totalE=0;for(const core of activeCores(c,options)){const full=cost(c,core.id,core.initial,p.goals[core.id]),spent=cost(c,core.id,core.initial,p.levels[core.id]);totalF+=full.f;totalE+=full.e;spentF+=spent.f;spentE+=spent.e;}const remainingF=totalF-spentF,remainingE=totalE-spentE,rate=p.daily+p.weekly/7,needed=Math.max(0,remainingF-p.stock);return {spentF,spentE,totalF,totalE,remainingF,remainingE,percent:totalF?100*spentF/totalF:100,rate,needed,days:needed===0?0:rate>0?Math.ceil(needed/rate):null};}
+ const api={clamp,defaults,clean,cost,settings,activeCores,sourceOrder,plan,summary};if(typeof module!=='undefined')module.exports=api;else root.HexaEngine=api;
+})(typeof window!=='undefined'?window:globalThis);
