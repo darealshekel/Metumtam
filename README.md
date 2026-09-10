@@ -38,6 +38,7 @@ To add it to your website, copy this entire directory to a static route such as 
 - `engine.js`: cost and progression calculations, also usable from Node.js.
 - `data.js`: the exported source orders, per-level cost tables, and class metadata.
 - `assets/`: local skill icons.
+- `translations/nexon-v271-common-nodes.json`: official third common-node names and class mappings from Nexon’s v.271 patch notes.
 
 ## Data scope
 
@@ -60,3 +61,5 @@ The source snapshot and game assets keep their original ownership; no ownership 
 All 15,593 source milestones across both modes matched the cost engine. All 54 classes have distinct resource orders. 3,672 combinations of resource mode, third-core visibility, current levels, and goals passed total-cost consistency checks. Complete, zero-income, and inventory-covered forecast states were checked. Desktop and 390px mobile layouts were inspected. Browser flows verified mode switching, third-core exclusion, hidden-level retention across reloads, upgrading, undo, typed-level persistence, class-preview isolation, class switching, unavailable classes, reset, full orders, import, and export.
 
 
+
+Third common-node labels use the [official Nexon v.271 table](https://www.nexon.com/maplestory/news/update/44597/updated-9-10-v-271-maple-story-x-frieren-beyond-journey-s-end-patch-notes#HEXASkill3rdCommonNode). The mapping covers 51 listed classes and updates the 47 that have this node in the exported orders. Names for Lynn, Mo Xuan, Kanna, and Hayato are retained in the translation catalog, but no absent upgrade milestones are invented. Lethe is not listed and keeps its original Korean name. Nexon’s table currently spells the Demon node “HEXA Defender of the DemonI”; that source spelling is preserved.

@@ -1,0 +1,24 @@
+{
+  "source": "Nexon MapleStory v.271 patch notes, updated September 10, 2026",
+  "sourceUrl": "https://www.nexon.com/maplestory/news/update/44597/updated-9-10-v-271-maple-story-x-frieren-beyond-journey-s-end-patch-notes#HEXASkill3rdCommonNode",
+  "coreId": "generalCore3",
+  "notes": "Names follow the supplied official table, including its spelling 'HEXA Defender of the DemonI'. Class labels are normalized to the planner's existing class names. A translation does not add a milestone absent from the source order. Lethe is not listed in this table.",
+  "entries": [
+    {"name": "HEXA Blitz Shield", "classes": ["Hero", "Paladin", "Dark Knight"]},
+    {"name": "HEXA Arcane Overdrive", "classes": ["Arch Mage (Fire, Poison)", "Arch Mage (Ice, Lightning)", "Bishop"]},
+    {"name": "HEXA Fury of the Wild", "classes": ["Bowmaster", "Marksman", "Pathfinder"]},
+    {"name": "HEXA Shadow Walker", "classes": ["Night Lord", "Shadower", "Dual Blade"]},
+    {"name": "HEXA Pirate’s Banner", "classes": ["Buccaneer", "Corsair", "Cannoneer"]},
+    {"name": "HEXA Phalanx Charge", "classes": ["Wind Archer", "Dawn Warrior", "Night Walker", "Blaze Wizard", "Thunder Breaker", "Mihile"]},
+    {"name": "HEXA Freud's Wisdom", "classes": ["Mercedes", "Aran", "Phantom", "Luminous", "Evan", "Shade"]},
+    {"name": "HEXA Resistance Infantry", "classes": ["Wild Hunter", "Battle Mage", "Mechanic", "Blaster", "Xenon"]},
+    {"name": "HEXA Defender of the DemonI", "classes": ["Demon Avenger", "Demon Slayer"]},
+    {"name": "HEXA Might of the Nova", "classes": ["Kaiser", "Angelic Buster", "Cadena", "Kain"]},
+    {"name": "HEXA Transcendent", "classes": ["Zero"]},
+    {"name": "HEXA Afterimage of the Otherworld", "classes": ["Kinesis"]},
+    {"name": "HEXA Conversion Overdrive", "classes": ["Illium", "Ark", "Adele", "Khali"]},
+    {"name": "HEXA Ring of Samsara", "classes": ["Lynn", "Mo Xuan"]},
+    {"name": "HEXA Twilight Bloom", "classes": ["Kanna", "Hayato"]},
+    {"name": "HEXA Lotus Flower", "classes": ["Hoyoung", "Lara", "Ren"]}
+  ]
+}
