@@ -4,8 +4,8 @@
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <meta name="theme-color" content="#171221"><meta name="description" content="Plan HEXA upgrades, track your skill levels, and calculate fragment costs across 54 MapleStory classes.">
  <title>metumtam — HEXA matrix</title>
- <link rel="icon" href="data:,"><link rel="stylesheet" href="styles.css?v=3"><link rel="stylesheet" href="matrix.css?v=7"><link rel="stylesheet" href="order-view.css?v=6"><link rel="stylesheet" href="skill-details.css?v=2"><link rel="stylesheet" href="enhancement.css?v=2"><link rel="stylesheet" href="metumtam.css?v=3">
- <script defer src="data.js?v=4"></script><script defer src="engine.js?v=7"></script><script defer src="matrix.js?v=7"></script><script defer src="order-view.js?v=7"></script><script defer src="descriptions.js?v=1"></script><script defer src="skill-details.js?v=2"></script><script defer src="enhancement.js?v=2"></script><script defer src="app.js?v=13"></script>
+ <link rel="icon" href="data:,"><link rel="stylesheet" href="styles.css?v=3"><link rel="stylesheet" href="matrix.css?v=7"><link rel="stylesheet" href="order-view.css?v=6"><link rel="stylesheet" href="skill-details.css?v=2"><link rel="stylesheet" href="enhancement.css?v=2"><link rel="stylesheet" href="metumtam.css?v=4">
+ <script defer src="data.js?v=4"></script><script defer src="engine.js?v=7"></script><script defer src="matrix.js?v=7"></script><script defer src="order-view.js?v=7"></script><script defer src="descriptions.js?v=1"></script><script defer src="skill-details.js?v=2"></script><script defer src="enhancement.js?v=2"></script><script defer src="app.js?v=14"></script>
 </head>
 <body>
  <a class="skip" href="#main">Skip to planner</a>
@@ -30,7 +30,7 @@
     <section class="order-settings" aria-label="Order settings">
      <div class="order-settings-controls"><div><div class="section-kicker">LIMITING RESOURCE</div><div class="segmented resource-modes" role="group" aria-label="Limiting resource"><button data-order-mode="fragments" aria-pressed="true"><span class="gem small"></span>Erda Fragment Limited</button><button data-order-mode="erda" aria-pressed="false"><span class="erda small"></span>Sol Erda Limited</button></div></div><label class="third-skill-toggle"><input type="checkbox" id="include-third"><span><strong>Include third skill core</strong><small id="third-skill-hint">Off by default for your GMS setup</small></span></label></div>
      <p id="order-note" class="order-note"></p>
-     <details class="reference-details"><summary><span>Estimated 80–85k reference</span><strong id="reference-score"></strong></summary><div id="reference-details-body"></div></details>
+     <p class="reference-note">based on 80K~ Normal PDR 380%</p>
     </section>
     <div class="workspace-grid">
     <section class="progress-overview" aria-label="Progress overview"><div class="progress-main"><div class="section-kicker">YOUR HEXA PROGRESS <span id="completed-count"></span></div><div class="progress-value"><strong id="progress-percent">0<span>%</span></strong><span id="progress-caption">of your fragment goal</span></div><div class="progress-track" role="progressbar" aria-label="Fragment progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="progress-fill"></div></div></div><div class="overview-stat"><span class="stat-label"><span class="gem small"></span>Fragments remaining</span><strong id="fragments-remaining"></strong><small id="fragments-spent"></small></div><div class="overview-stat"><span class="stat-label"><span class="erda small"></span>Sol Erda remaining</span><strong id="erda-remaining"></strong><small id="erda-spent"></small></div></section>
@@ -44,7 +44,7 @@
      </div>
      <div class="left-column"><div id="enhancement-panel"></div>
       <section class="farming-section" aria-labelledby="farming-heading"><div class="section-heading"><h3 id="farming-heading">Fragment forecast</h3><span data-icon="calendar"></span></div><div class="forecast-inputs"><label>Fragments / day<input id="daily-input" type="number" min="0" max="10000000" inputmode="numeric"></label><label>Other weekly fragments<input id="weekly-input" type="number" min="0" max="10000000" inputmode="numeric"></label></div><label class="weekly-dungeon-label">Weekly dungeon<select id="weekly-dungeon" aria-label="Weekly dungeon"><option value="none">None · 0 fragments</option><option value="high_mountain">High Mountain · 40 fragments</option><option value="angler_company">Angler Company · 55 fragments</option><option value="nightmare_paradise">Nightmare Paradise · 70 fragments</option></select></label><label class="weekly-quest-label"><input id="weekly-quest" type="checkbox"><span>Weekly quest <strong>+90 fragments / week</strong></span></label><label class="stock-label">Already in inventory<input id="stock-input" type="number" min="0" max="10000000" inputmode="numeric"></label><div class="forecast-rate"><span>Average daily rate</span><strong id="forecast-rate"></strong></div><div class="forecast-result"><span>Days left<strong id="forecast-days"></strong></span><span class="calendar-icon" data-icon="calendar"></span></div><div class="forecast-date"><span>Estimated completion</span><strong id="forecast-date"></strong></div><p id="forecast-note" class="quiet"></p></section>
-      <div class="source-note"><span data-icon="info"></span><p>Based on a fixed reference order.<br>Calibrated to ~82.5k Boss 380 Normal.</p></div>
+      <div class="source-note"><span data-icon="info"></span><p>Based on a fixed reference order.</p></div>
      </div>
     </div>
    </div>

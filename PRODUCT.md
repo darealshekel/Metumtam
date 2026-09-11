@@ -11,4 +11,4 @@ Preserve the user's requested in-game HEXA matrix layout and class-specific icon
 
 The current library uses clickable class artwork with accessible class names and working search/category filters. Branding is a plain lowercase metumtam wordmark. Progress precedes HEXA Order. Legal pages are accessible from the footer; About and Export actions are removed.
 
-Reference orders now target synthetic level 286 profiles at approximately 82.5k Boss 380 Normal Power. A collapsed reference-details section shows each class’s measured score and assumptions, with a responsive table and separate reference page. Saved progression remains independent of the calibration profile.
+Reference orders now target synthetic level 286 profiles at approximately 82.5k Boss 380 Normal Power. The planner shows the plain note “based on 80K~ Normal PDR 380%”. Calibration provenance remains in the separate reference page and input files. Saved progression remains independent of the calibration profile.
