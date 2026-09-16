@@ -11,7 +11,15 @@
  function activeCores(c,options){const s=settings(options);return c.cores.filter(core=>s.includeThirdSkill||core.id!=='skillCore3');}
  function sourceOrder(c,options){const s=settings(options),order=c.orders?.[s.orderMode]||(s.orderMode==='fragments'?c.order:[]);return order.filter(step=>s.includeThirdSkill||step.id!=='skillCore3');}
  function plan(c,p,options){const levels={...p.levels},rows=[];let totalF=0,totalE=0;for(const step of sourceOrder(c,options)){const target=Math.min(step.to,p.goals[step.id]);if(target<=levels[step.id])continue;const from=levels[step.id],price=cost(c,step.id,from,target);totalF+=price.f;totalE+=price.e;rows.push({...step,from,to:target,f:price.f,e:price.e,totalF,totalE});levels[step.id]=target;}return rows;}
+ function nextEnhancement(c,p,options){
+  const milestone=plan(c,p,options)[0];if(!milestone)return null;
+  const core=c.cores.find(core=>core.id===milestone.id);
+  // HEXA Stats are completion markers, not skill levels with per-level costs.
+  const to=core.type==='HEXA Stat'?milestone.to:Math.min(milestone.from+1,milestone.to);
+  const price=cost(c,milestone.id,milestone.from,to);
+  return {...milestone,to,...price,totalF:price.f,totalE:price.e};
+ }
  function completionDate(days,start=new Date()){if(days===null||!Number.isFinite(days)||days<0)return null;const date=new Date(start);date.setHours(12,0,0,0);date.setDate(date.getDate()+Math.ceil(days));return Number.isFinite(date.getTime())?date:null;}
  function summary(c,p,options){let spentF=0,totalF=0,spentE=0,totalE=0;for(const core of activeCores(c,options)){const full=cost(c,core.id,core.initial,p.goals[core.id]),spent=cost(c,core.id,core.initial,p.levels[core.id]);totalF+=full.f;totalE+=full.e;spentF+=spent.f;spentE+=spent.e;}const remainingF=totalF-spentF,remainingE=totalE-spentE,weeklyTotal=p.weekly+(dungeonRewards[p.weeklyDungeon]||0)+(p.weeklyQuest?90:0),rate=p.daily+weeklyTotal/7,needed=Math.max(0,remainingF-p.stock);return {spentF,spentE,totalF,totalE,remainingF,remainingE,percent:totalF?100*spentF/totalF:100,rate,weeklyTotal,needed,days:needed===0?0:rate>0?Math.ceil(needed/rate):null};}
- const api={clamp,defaults,clean,cost,settings,activeCores,sourceOrder,plan,summary,enhancement,enhance,dungeonRewards,completionDate};if(typeof module!=='undefined')module.exports=api;else root.HexaEngine=api;
+ const api={clamp,defaults,clean,cost,settings,activeCores,sourceOrder,plan,nextEnhancement,summary,enhancement,enhance,dungeonRewards,completionDate};if(typeof module!=='undefined')module.exports=api;else root.HexaEngine=api;
 })(typeof window!=='undefined'?window:globalThis);

@@ -3,16 +3,16 @@
 <head>
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <meta name="theme-color" content="#171221"><meta name="description" content="Plan HEXA upgrades, track your skill levels, and calculate fragment costs across 54 MapleStory classes.">
- <title>metumtam — HEXA matrix</title>
- <link rel="icon" href="data:,"><link rel="stylesheet" href="styles.css?v=3"><link rel="stylesheet" href="matrix.css?v=7"><link rel="stylesheet" href="order-view.css?v=6"><link rel="stylesheet" href="skill-details.css?v=2"><link rel="stylesheet" href="enhancement.css?v=2"><link rel="stylesheet" href="metumtam.css?v=4">
- <script defer src="data.js?v=4"></script><script defer src="engine.js?v=7"></script><script defer src="matrix.js?v=7"></script><script defer src="order-view.js?v=7"></script><script defer src="descriptions.js?v=1"></script><script defer src="skill-details.js?v=2"></script><script defer src="enhancement.js?v=2"></script><script defer src="app.js?v=14"></script>
+ <title>metumtam — HEXA upgrades</title>
+ <link rel="icon" href="data:,"><link rel="stylesheet" href="styles.css?v=3"><link rel="stylesheet" href="matrix.css?v=7"><link rel="stylesheet" href="order-view.css?v=6"><link rel="stylesheet" href="skill-details.css?v=2"><link rel="stylesheet" href="enhancement.css?v=2"><link rel="stylesheet" href="metumtam.css?v=5">
+ <script defer src="data.js?v=4"></script><script defer src="engine.js?v=8"></script><script defer src="matrix.js?v=7"></script><script defer src="order-view.js?v=7"></script><script defer src="descriptions.js?v=1"></script><script defer src="skill-details.js?v=2"></script><script defer src="enhancement.js?v=3"></script><script defer src="app.js?v=15"></script>
 </head>
 <body>
- <a class="skip" href="#main">Skip to planner</a>
+ <a class="skip" href="#main">Skip to content</a>
  <aside class="sidebar" id="sidebar">
-  <a class="brand wordmark" href="#main" aria-label="metumtam home">metumtam</a>
+  <a class="brand wordmark" href="#classes" aria-label="metumtam home">metumtam</a>
   <div class="nav-label">WORKSPACE</div>
-  <a class="workspace-link active" href="#main"><span data-icon="hex"></span>HEXA upgrades<span class="nav-dot"></span></a>
+  <a class="workspace-link active" href="#classes" aria-label="HEXA upgrades"><span data-icon="hex"></span>HEXA upgrades<span class="nav-dot"></span></a>
   <div class="library-head"><span class="nav-label">CLASS LIBRARY</span><span id="class-count">54 / 54</span></div>
   <label class="search"><span data-icon="search"></span><input id="class-search" placeholder="Find a class…" autocomplete="off" aria-label="Search classes"><kbd>/</kbd></label>
   <label class="category-label"><select id="category" aria-label="Filter class category"><option>All classes</option><option>Warrior</option><option>Mage</option><option>Archer</option><option>Thief</option><option>Pirate</option></select><span data-icon="chevron"></span></label>
@@ -21,8 +21,20 @@
  </aside>
  <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
  <div class="shell">
-  <header class="topbar"><button id="menu-button" class="icon-button mobile-only" aria-label="Open class library" aria-expanded="false"><span data-icon="menu"></span></button><div class="breadcrumb">MapleStory <span>/</span> <strong>HEXA upgrades</strong></div><div class="top-actions"><span class="saved-status" id="saved-status"><span class="status-dot"></span>Saved on this device</span></div></header>
+  <header class="topbar"><button id="menu-button" class="icon-button mobile-only" aria-label="Open class library" aria-expanded="false"><span data-icon="menu"></span></button><div class="breadcrumb">MapleStory <span>/</span> <a href="#classes">HEXA upgrades</a></div><div class="top-actions"><span class="saved-status" id="saved-status"><span class="status-dot"></span>Saved on this device</span></div></header>
   <main id="main" tabindex="-1">
+   <section id="class-library-page" class="class-library-page" aria-labelledby="library-title">
+    <div class="library-page-heading"><div class="eyebrow">YOUR 6TH JOB JOURNEY</div><h1 id="library-title">HEXA upgrades</h1><p>Pick a class to plan your next upgrade. Your saved levels stay with each class.</p></div>
+    <div class="library-page-toolbar">
+     <div class="segmented library-scope" role="group" aria-label="Classes to show"><button data-library-scope="saved" aria-pressed="false">My classes <span id="saved-class-count">0</span></button><button data-library-scope="all" aria-pressed="true">All classes <span id="all-class-count">54</span></button></div>
+     <label class="search library-page-search"><span data-icon="search"></span><input id="library-search" placeholder="Find a class…" autocomplete="off" aria-label="Search class library"></label>
+     <label class="library-page-category"><select id="library-category" aria-label="Class library category"><option>All classes</option><option>Warrior</option><option>Mage</option><option>Archer</option><option>Thief</option><option>Pirate</option></select></label>
+    </div>
+    <p id="library-results" class="library-results" role="status"></p>
+    <div id="class-gallery" class="class-gallery"></div>
+   </section>
+   <div id="class-planner-page" hidden>
+   <a class="planner-back text-button" href="#classes">← Class library</a>
    <h1 class="matrix-page-title">HEXA matrix</h1>
    <section class="class-heading"><div class="class-identity"><div class="class-emblem" id="class-emblem"></div><div><div class="eyebrow" id="class-category"></div><h2 id="class-name"></h2></div><span class="class-version">6TH JOB</span></div><div class="segmented" role="group" aria-label="Planner mode"><button id="progress-mode" aria-pressed="true"><span data-icon="sliders"></span>My progression</button><button id="preview-mode" aria-pressed="false"><span data-icon="eye"></span>Class preview</button></div></section>
    <div id="unavailable" class="unavailable" hidden></div>
@@ -49,6 +61,7 @@
     </div>
    </div>
 
+   </div>
    <footer class="page-footer"><span>metumtam <span class="footer-slash">/</span> Built for the next milestone.</span><span><a href="https://maplescouter.com/en/hexa" target="_blank" rel="noopener noreferrer">Data: MapleScouter <span data-icon="external"></span></a><span class="footer-divider">·</span>54 supported classes</span><nav class="legal-links" aria-label="Legal"><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy</a></nav></footer>
   </main>
  </div>
