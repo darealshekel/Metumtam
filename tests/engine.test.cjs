@@ -6,6 +6,9 @@ const E = require('../engine.js');
 const context = { window: {} };
 vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../data.js'), 'utf8'), context);
 const classes = context.window.HEXA_DATA.classes.filter(c => c.available);
+for (const invalid of [null, [], 'old value', 42]) {
+ assert.deepEqual(E.clean(classes[0], invalid), E.defaults(classes[0]), 'Malformed saved profiles recover to defaults');
+}
 let enhancements = 0, splitMilestones = 0, scenarios = 0;
 
 for (const c of classes) {
