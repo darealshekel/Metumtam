@@ -1,17 +1,35 @@
 const assert=require('node:assert/strict');
 const L=require('../level-damage.js');
+const fs=require('node:fs'),vm=require('node:vm');
 const c={id:'test',kalingOrders:{fragments:[]}},single={id:'masteryCore1',from:1,to:2,fd:.123},group={id:'masteryCore2',from:19,to:25,fd:4};
 global.HEXA_DAMAGE={classes:{test:{orders:{general_fragments:[single,group],general_erda:[group],kaling_fragments:[{...single,fd:.2}]}}}};
 assert.equal(L.lookup(c,single,{}),.123);
 assert.equal(L.lookup(c,single,{bossMode:'kaling'}),.2);
-assert.equal(L.lookup(c,single,{orderMode:'erda'}),null,'Do not mix different resource paths');
+assert.equal(L.lookup(c,single,{orderMode:'erda'}),.123,'Use an exact same-boss level from the alternate resource reference');
+assert.deepEqual(L.resolve(c,single,{orderMode:'erda'}),{fd:.123,boss:'general',resource:'fragments',alternate:true});
+assert.match(L.markup(c,single,{orderMode:'erda'}),/General bosses · Fragment reference/);
+const kalingOnly={id:'skillCore2',from:9,to:10,fd:1.5};
+global.HEXA_DAMAGE.classes.test.orders.kaling_fragments.push(kalingOnly);
+assert.equal(L.lookup(c,kalingOnly,{}),null,'Never use Kaling FD in General bosses');
+global.HEXA_DAMAGE.classes.test.orders.general_erda.push({...single,fd:.15});
+assert.equal(L.lookup(c,single,{orderMode:'erda'}),.15,'Prefer the selected resource reference when available');
 assert.equal(L.lookup(c,{...group,to:20},{}),null,'Do not present grouped FD as single-level FD');
 assert.equal(L.lookup(c,group,{}),null,'Do not display any grouped gain');
 assert.equal(L.lookup(c,{id:'hexaStat1',from:0,to:1},{}),null,'A stat marker is not a skill level');
 assert.equal(L.lookup({id:'missing'},single,{}),null);
 assert.match(L.markup(c,single,{}),/Lv\. 1 → 2/);
 assert.match(L.markup(c,single,{}),/0\.123%/);
-assert.match(L.markup(c,{...group,to:20},{}),/No verified FD value/);
+assert.match(L.markup(c,{...group,to:20},{}),/single-level FD is unavailable/);
+assert.match(L.markup({id:'missing'},single,{}),/not been collected/);
 assert.doesNotMatch(L.markup(c,{...group,to:20},{}),/4\.000%/);
 assert.match(L.markup(c,null,{}),/goals are complete/);
+const ctx={window:{}};vm.runInNewContext(fs.readFileSync('level-damage-data.js','utf8'),ctx);global.HEXA_LEVEL_DAMAGE=ctx.window.HEXA_LEVEL_DAMAGE;
+const ren={id:'ren',kalingOrders:{fragments:[]}};
+for(const mode of ['fragments','erda'])for(let from=19;from<30;from++){
+ const r=L.resolve(ren,{id:'masteryCore3',from,to:from+1},{bossMode:'general',orderMode:mode});
+ assert.ok(r.calculated&&r.fd>0&&r.fd<1,'Every remaining Wish Unending level has a separately calculated gain');
+}
+assert.ok(Math.abs(L.lookup(ren,{id:'masteryCore3',from:19,to:20},{})-.26089088490348633)<.000001);
+assert.equal(L.lookup(ren,{id:'masteryCore3',from:19,to:20},{bossMode:'kaling'}),null,'Calculated General FD must not leak into Kaling');
+assert.equal(L.lookup(ren,{id:'masteryCore3',from:19,to:25},{}),null);
 console.log('Single-level FD checks passed.');

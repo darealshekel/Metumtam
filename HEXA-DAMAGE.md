@@ -1,36 +1,29 @@
-# HEXA damage and stat estimates
+# Single-level FD references
 
-The damage layer is an offline snapshot of MapleScouter's public manual calculator, collected on 19 September 2026 using the existing synthetic reference presets in `reference-profiles/`. No player data is used. It is separate from the September 11 order export. Source formula changes can change the recalculated reference score.
+The stat-planning UI has been removed. Existing matrix levels, goals, materials and HEXA Stat completion markers remain. The old saved stat-roll field is retained for storage compatibility but has no effect on upgrade order.
 
-## Coverage
+## Display and lookup
 
-Reference efficiencies and refreshed General orders: Adele, Angelic Buster, Aran, Ren.
-Kaling orders for both limiting resources: Adele, Angelic Buster, Ren.
-Aran currently has the Kaling Fragment order only.
-Other classes retain their existing General orders. Their stat editor supports custom marginal efficiencies, but no reference FD is invented for them. MapleScouter rate-limited further collection; incomplete combinations are disabled and labeled in the interface.
+The FD box sits above Material Owned beside the matrix. It describes exactly one skill level. It never divides a multi-level milestone gain, displays grouped FD, or borrows Kaling FD for General bosses.
 
-## Upgrade FD
+The lookup prefers a separately calculated before/after damage pair. Otherwise it uses an exact single-level source row from the selected boss/resource reference. If that resource path groups the level, an exact single-level row from the other resource path for the same boss may be used, with its origin labeled. This does not change the selected order or upgrade costs. All results are reference estimates: the user's other stats and node levels can change the actual gain.
 
-The source `class_hexa` rows contain a reference FD efficiency per 30 fragments in column 7, the milestone's fragment cost in column 4, and its level interval in column 10. Approximate FD is `efficiency × fragments / 30`, in percent. The source efficiency is rounded, so this is not an exact measurement. The source's web tooltip converts the same field into FD per meso budget using the configured fragment price.
+## Separately calculated Ren levels
 
-The interface displays FD only when a source row matches the exact next skill level, in the selected boss and resource path. This appears above Material Owned. Multi-level source gains are never shown as single-level gains or divided across levels. A missing match displays an explicit unavailable value. HEXA Stat completion markers have no single-skill-level FD. Milestone dialogs likewise omit grouped FD.
+`level-damage-data.js` contains MapleScouter `calculatedHexaDamage_380` results for Wish Unending (masteryCore3), levels 19 through 30. Each request uses the same public synthetic `reference-profiles/ren.json` stats. Other node levels are fixed at the General Fragment reference immediately before its grouped 19-to-25 upgrade. Only masteryCore3 changes between requests. The baseline node levels and source values are stored with the snapshot.
 
-Column 8 is a cumulative damage ratio used for the source's converted-score display; it is not a per-upgrade FD percentage. It is deliberately not summed or treated as FD, and no linear interpolation between grouped milestone levels is used. Changing the user's other levels does not recompute this reference efficiency. Enhance continues to charge and apply exactly one skill level.
+For each single level: `FD percent = (damageAfter / damageBefore - 1) * 100`.
 
-Kaling is the source's `cycle: "1"`; General is `cycle: "3"`. Both use reset-start orders, the preset's class-specific calculated efficiencies, and Mercedes build type 1. Third-skill filtering retains source order; it is not a new optimization for a different patch.
+The 19-to-20 comparison is 1,192,569,661.7218194 to 1,195,680,967.5052204, giving approximately 0.260891% FD. Every subsequent level through 30 has its own calculator observation; no interpolation is used. These General bosses results are usable with either limiting-resource order but do not substitute for Kaling results.
 
-## Stat model
+## Other snapshot data
 
-HEXA Stats are saved separately from the matrix's completion markers. Each active node has three distinct stat selections, each line is 0–10, and a node's levels total at most 20. Main-line stat choices must be unique across active nodes; an additional stat can appear at most twice. A main line uses weights `[0,1,2,3,4,6,8,10,13,16,20]`, and additional lines use their level directly.
+`damage-data.js` retains the September 19, 2026 public manual-calculator snapshot using synthetic reference presets. Reference efficiencies and refreshed General orders cover Adele, Angelic Buster, Aran and Ren. Both Kaling resource orders cover Adele, Angelic Buster and Ren; Aran has its Kaling Fragment order. Other classes retain their September 11 General orders. Missing per-level data is explicitly unavailable, never shown as zero.
 
-Per weight: ATT/MATT 5; flat main stat 100 (Xenon 48 flat all stats; Demon Avenger 2,100 flat HP); boss damage 1%; damage 0.75%; critical damage 0.35%; IED 1%.
+The source `class_hexa` column 7 is FD efficiency per 30 fragments. Approximate source-step FD is `column7 * column4 / 30`, where column4 is the whole step's fragment cost. It can be displayed for one level only when column10's interval matches that exact level. The source efficiency is rounded. Column8 is a cumulative damage ratio and is not added as FD.
 
-The FD model uses the reference calculator's marginal efficiencies before these HEXA stats. Damage and boss damage share an additive factor. Attack, flat stat, critical damage and defense each form separate factors that are multiplied together. IED lines combine as `1 − product(1 − lineIED)`. The defense efficiency uses the explicit 380% PDR field. Xenon's flat-stat coefficient sums all three stat efficiencies. Custom inputs use the same model and specify marginal FD percentages, including the denominator for flat-stat units. A 100% critical rate is assumed.
+Kaling is source `cycle: "1"`; General is `cycle: "3"`. Third-skill filtering keeps the source ordering rather than reoptimizing a different patch. [Reference assumptions](REFERENCE-PROFILES.md) and [MapleScouter calculator](https://maplescouter.com/en/input).
 
-Recommendations exhaustively search valid assignments for the supplied rolls with an upper-bound pruning optimization. They do not reroll levels, estimate reroll cost, spend materials, or alter skill order. This is a marginal-stat estimate; it does not simulate gear interactions, rotations or class-specific nonlinear breakpoints.
+## Validation
 
-Sources: [MapleScouter](https://maplescouter.com/en/hexa), [official MapleSEA HEXA Stat overview](https://www.maplesea.com/newage/6th/), [HEXA Stat level table](https://maplestorywiki.net/w/6th_Job#HEXA_Stats).
-
-## Verification
-
-Run `node tests/engine.test.cjs`, `node tests/hexa-damage.test.cjs`, and `node tests/level-damage.test.cjs` from the repository root. These verify stat scaling, IED composition, custom efficiency units, valid assignments, an independent exhaustive optimizer comparison, saved-state compatibility, all 432 class/resource/boss/third-node planning combinations, and exclusion of grouped FD. `tests/browser-damage.js` verifies the stat UI against a local preview on port 4181 using Playwright CLI. `tests/browser-level-panel.js` checks FD placement and matrix-panel alignment at five viewport widths.
+Run `node tests/engine.test.cjs`, `node tests/hexa-damage.test.cjs`, and `node tests/level-damage.test.cjs`. Browser checks against a local preview at port 4181 are in `tests/browser-general-fd.js` and `tests/browser-level-panel.js`. They verify General resource switching, removed stat planning, exact-level FD, saved levels, one-level costs and responsive alignment.
