@@ -1,0 +1,17 @@
+const assert=require('node:assert/strict');
+const L=require('../level-damage.js');
+const c={id:'test',kalingOrders:{fragments:[]}},single={id:'masteryCore1',from:1,to:2,fd:.123},group={id:'masteryCore2',from:19,to:25,fd:4};
+global.HEXA_DAMAGE={classes:{test:{orders:{general_fragments:[single,group],general_erda:[group],kaling_fragments:[{...single,fd:.2}]}}}};
+assert.equal(L.lookup(c,single,{}),.123);
+assert.equal(L.lookup(c,single,{bossMode:'kaling'}),.2);
+assert.equal(L.lookup(c,single,{orderMode:'erda'}),null,'Do not mix different resource paths');
+assert.equal(L.lookup(c,{...group,to:20},{}),null,'Do not present grouped FD as single-level FD');
+assert.equal(L.lookup(c,group,{}),null,'Do not display any grouped gain');
+assert.equal(L.lookup(c,{id:'hexaStat1',from:0,to:1},{}),null,'A stat marker is not a skill level');
+assert.equal(L.lookup({id:'missing'},single,{}),null);
+assert.match(L.markup(c,single,{}),/Lv\. 1 → 2/);
+assert.match(L.markup(c,single,{}),/0\.123%/);
+assert.match(L.markup(c,{...group,to:20},{}),/No verified FD value/);
+assert.doesNotMatch(L.markup(c,{...group,to:20},{}),/4\.000%/);
+assert.match(L.markup(c,null,{}),/goals are complete/);
+console.log('Single-level FD checks passed.');

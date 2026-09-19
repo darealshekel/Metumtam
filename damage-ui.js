@@ -3,7 +3,7 @@
  const S=root.HexaStats,esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const percent=n=>Number.isFinite(n)?'+'+n.toFixed(2)+'%':'—';
  function gain(c,row,options){const type=options?.bossMode==='kaling'&&c.kalingOrders?.[options?.orderMode||'fragments']?'kaling':'general',mode=options?.orderMode==='erda'?'erda':'fragments',data=root.HEXA_DAMAGE?.classes?.[c.id]?.orders?.[type+'_'+mode];if(!data)return null;return data.find(r=>r.id===row.id&&r.from===row.from&&r.to===row.to)?.fd??null;}
- function detail(c,row,options){const type=options?.bossMode==='kaling'&&c.kalingOrders?.[options?.orderMode||'fragments']?'kaling':'general',mode=options?.orderMode==='erda'?'erda':'fragments';const source=root.HEXA_DAMAGE?.classes?.[c.id]?.orders?.[type+'_'+mode]?.find(r=>r.id===row.id&&r.from<=row.from&&r.to>=row.to);if(!source)return '';return `<div class="reference-fd"><span>Reference ${row.id.startsWith('hexaStat')?'stat milestone':`Lv. ${source.from} → ${source.to}`} FD</span><strong>≈ ${percent(source.fd)}</strong><small>Approximate gain for this entire milestone at its position in the reference order.${source.from!==row.from||source.to!==row.to?' This is not the FD of this single Enhance.':''} Your gain depends on your build and other node levels.</small></div>`;}
+ function detail(c,row,options){if(row.to!==row.from+1||row.id.startsWith('hexaStat'))return '';return root.HexaLevelDamage.markup(c,row,options);}
 
  function render(c,p,options,preview){
  const state=S.clean(p.hexaStats),r=S.result(c,state),disabled=preview?'disabled':'',eff=S.effective(c,state);

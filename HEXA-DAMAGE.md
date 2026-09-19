@@ -11,7 +11,9 @@ Other classes retain their existing General orders. Their stat editor supports c
 
 ## Upgrade FD
 
-The source `class_hexa` rows contain a reference FD efficiency per 30 fragments in column 7, the milestone's fragment cost in column 4, and its level interval in column 10. The displayed approximate milestone FD is `efficiency × fragments / 30`, in percent. The source efficiency is rounded, so this is not an exact measurement. The source's web tooltip converts the same field into FD per meso budget using the configured fragment price.
+The source `class_hexa` rows contain a reference FD efficiency per 30 fragments in column 7, the milestone's fragment cost in column 4, and its level interval in column 10. Approximate FD is `efficiency × fragments / 30`, in percent. The source efficiency is rounded, so this is not an exact measurement. The source's web tooltip converts the same field into FD per meso budget using the configured fragment price.
+
+The interface displays FD only when a source row matches the exact next skill level, in the selected boss and resource path. This appears above Material Owned. Multi-level source gains are never shown as single-level gains or divided across levels. A missing match displays an explicit unavailable value. HEXA Stat completion markers have no single-skill-level FD. Milestone dialogs likewise omit grouped FD.
 
 Column 8 is a cumulative damage ratio used for the source's converted-score display; it is not a per-upgrade FD percentage. It is deliberately not summed or treated as FD, and no linear interpolation between grouped milestone levels is used. Changing the user's other levels does not recompute this reference efficiency. Enhance continues to charge and apply exactly one skill level.
 
@@ -31,4 +33,4 @@ Sources: [MapleScouter](https://maplescouter.com/en/hexa), [official MapleSEA HE
 
 ## Verification
 
-Run `node tests/engine.test.cjs` and `node tests/hexa-damage.test.cjs` from the repository root. The latter verifies stat scaling, IED composition, custom efficiency units, valid assignments, an independent exhaustive optimizer comparison, saved-state compatibility and all 432 class/resource/boss/third-node planning combinations. `tests/browser-damage.js` verifies the UI against a local preview on port 4181 using Playwright CLI.
+Run `node tests/engine.test.cjs`, `node tests/hexa-damage.test.cjs`, and `node tests/level-damage.test.cjs` from the repository root. These verify stat scaling, IED composition, custom efficiency units, valid assignments, an independent exhaustive optimizer comparison, saved-state compatibility, all 432 class/resource/boss/third-node planning combinations, and exclusion of grouped FD. `tests/browser-damage.js` verifies the stat UI against a local preview on port 4181 using Playwright CLI. `tests/browser-level-panel.js` checks FD placement and matrix-panel alignment at five viewport widths.
